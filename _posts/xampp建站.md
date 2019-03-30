@@ -6,7 +6,11 @@ categories: xampp
 ---
 ## 一、工具/原料
 
+``` bash
+
 xampp
+
+```
 
 ## 二、PHP环境配置
 ### 1、可以在终端使用
