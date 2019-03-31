@@ -38,9 +38,17 @@ DBG2    DSDT    FIDT    LPIT    SSDT1   SSDT4   SSDT7   TPM2    data
 **只需要dsdt ssdt开头的文件(不包括ssdt-x)**
 
 * linux提取的自行加上后缀aml
-* DSDT.aml   SSDT3.aml  SSDT6.aml SSDT9.aml 
-SSDT2.aml SSDT3.dsl SSDT5.aml SSDT8.aml 
-SSDT1.aml SSDT4.aml  SSDT7.aml
+* DSDT.aml   
+SSDT3.aml  
+SSDT6.aml 
+SSDT9.aml 
+SSDT2.aml 
+SSDT3.dsl 
+SSDT5.aml 
+SSDT8.aml 
+SSDT1.aml 
+SSDT4.aml  
+SSDT7.aml
 
 **将上一步提取的文件反编译**
 
