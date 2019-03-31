@@ -6,7 +6,7 @@ categories: hackintosh
 ---
 # 炫龙 耀7000 EFI 黑苹果
 
-[EFI文件](https://github.com/jinmu333/Shinalon_YAO_7000_efi)
+* [EFI文件](https://github.com/jinmu333/Shinalon_YAO_7000_efi)
 
 ### 电脑配置
 
