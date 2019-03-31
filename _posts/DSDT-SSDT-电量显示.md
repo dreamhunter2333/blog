@@ -15,15 +15,15 @@ categories: hackintosh
 
 ### DSDT/SSDT 是什么，如何提取
 
-* DSDT
+**DSDT**
 * DSDT是主板BIOS中ACPI的一个表。什么是ACPI呢，它是BIOS的一个高级功能模块。
 * 修改DSDT的基本过程
 * 提取bios的AML文件，反编译为dsl文件，修改完毕后，编译到Aml--〉替换BIOS中的DSDT。
 * 技术的进步让我们可以由clover来加载编译好的DSDT.aml文件在修复ACPI缺陷，使主板更好支持苹果系统。
 
+**提取DSDT**
 * 1.clover 界面 F4 提取到 EFI/CLOVER/ACPI/origin
 * 2.MACiASL提取
 * 3.windows、linux提取
-
 * linux提取 /sys/fireware/acpi/tables 文件夹即可
 
