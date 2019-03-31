@@ -62,7 +62,7 @@ iasl -da -dl *.aml
 # 无法联合反编译 请尝试
 iasl -dl *.aml
 ```
-** **
+****
 **此时你的目录应该如下**  
 
 * DSDT.aml  SSDT1.dsl SSDT3.aml SSDT4.dsl SSDT6.aml SSDT7.dsl SSDT9.aml
@@ -79,7 +79,7 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 * 错误一般都是 引入错误 和类型错误
 
 ![1](/imgs/dsdt1.png)
-
+****
 **找到电池变量位置**
 
 * 在DSDT中搜索 `embeddedcontrol`
@@ -201,6 +201,7 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
             }
 ```
 
+****
 **编写电池补丁**
 
 * 新建一个`txt`
