@@ -2,6 +2,7 @@
 title: 炫龙耀7000_hackintosh全过程
 date: 2019-03-31 12:10:12
 tags: hackintosh
+categories: hackintosh
 ---
 # 炫龙 耀7000 EFI 黑苹果
 
