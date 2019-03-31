@@ -68,4 +68,12 @@ iasl -dl *.aml
 DSDT.dsl  SSDT2.aml SSDT3.dsl SSDT5.aml SSDT6.dsl SSDT8.aml SSDT9.dsl
 SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 
-* dsdt.dsl就是我们需要的文件
+* DSDT.dsl 就是我们需要的文件
+
+### DSDT/SSDT 关于电量显示的修改
+
+**使用 MACiASL 打开 DSDT.dsl**
+
+* 点击编译，确保没有错误 否则需要先进行除错
+* 错误一般都是 引入错误 和类型错误
+![1](/imgs/dsdt1.png)
