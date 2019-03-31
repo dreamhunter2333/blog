@@ -7,14 +7,14 @@ tags:
     - ssr
 ---
 
-## 一、克隆或者直接下载ssr
+### 一、克隆或者直接下载ssr
 
 ``` bash
 git clone https://github.com/jinmu333/shadowsocksr.git
 ```
-## 二、在Linux下使用
+### 二、在Linux下使用
 
-1、克隆或下载好之后，打开 shadowsocksr 文件夹，找到 config.json 配置文件，在这里填写好你相应的节点信息
+**克隆或下载好之后，打开 shadowsocksr 文件夹，找到 config.json 配置文件，在这里填写好你相应的节点信息**
 
 ``` bash
 
@@ -34,7 +34,7 @@ source /etc/profile
 
 ```
 
-## 三、打开 SSR/关闭 SSR
+### 三、打开 SSR/关闭 SSR
 
 ``` bash
 
@@ -54,7 +54,7 @@ stopssr
 
 ```
 
-## 四、在Linux终端使用SSR服务
+### 四、在Linux终端使用SSR服务
 
 ``` bash
 
