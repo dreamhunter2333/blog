@@ -43,12 +43,14 @@ tags: hackintosh
 
 ### 调整 macOS CPU性能
 * [使用方法](https://github.com/daliansky/XiaoMi-Pro/blob/master/one-key-cpufriend/README_CN.md)
+
 ``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro/master/one-key-cpufriend/one-key-cpufriend_cn.sh)"
 ```
 
 ### HIDPI   
 * [开启方法](https://github.com/xzhih/one-key-hidpi)
+
 ``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"
 ```
