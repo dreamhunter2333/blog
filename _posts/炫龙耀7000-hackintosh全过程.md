@@ -5,23 +5,19 @@ tags: hackintosh
 ---
 # 炫龙 耀7000 EFI 黑苹果
 
-# Shinalon YAO 7000 efi  for macOS Mojave
-
-这是我使用的 炫龙 耀7000 的CLOVER引导文件
 
 ### 电脑配置
 
-*  规格     | 详细信息                                                |
-* -------- | ----------------------------------------------------- |
-*  电脑型号 | 炫龙 耀7000 笔记本电脑                                    |
-*  操作系统 | macOS Mojave 18D42                                   |
-*  处理器   | 英特尔 Core i5-8300H @ 2.30GHz 四核                   |
-*  内存     | 16 GB ( 镁光 DDR4 2666MHz )                           |
-*  硬盘     | INTEL 760P (256 GB / NVME固态硬盘 )                       |
-*  显卡     | 英特尔 UHD Graphics 630 (platform-id:0x3E9B0000)       |
-*  显示器   | 京东方 BOE  1920x1080 (15.6 英寸)                      |
-*  声卡     | ALC269 (layout-id:8)                                 |
-*  网卡     | 英特尔网卡已更换为Bcm94352ZAE(DW1560)                     |
+*  规格    | 详细信息                                              
+*  电脑型号 | 炫龙 耀7000 笔记本电脑                              
+*  操作系统 | macOS Mojave 18D42                                
+*  处理器   | 英特尔 Core i5-8300H @ 2.30GHz 四核                   
+*  内存     | 16 GB ( 镁光 DDR4 2666MHz )                        
+*  硬盘     | INTEL 760P (256 GB / NVME固态硬盘 )                      
+*  显卡     | 英特尔 UHD Graphics 630 (platform-id:0x3E9B0000)      
+*  显示器   | 京东方 BOE  1920x1080 (15.6 英寸)                     
+*  声卡     | ALC269 (layout-id:8)                                
+*  网卡     | 英特尔网卡已更换为Bcm94352ZAE(DW1560)                   
 
 ### 安装镜像
 
