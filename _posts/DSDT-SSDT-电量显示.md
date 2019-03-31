@@ -62,7 +62,6 @@ iasl -da -dl *.aml
 # 无法联合反编译 请尝试
 iasl -dl *.aml
 ```
-  
 ** **
 **此时你的目录应该如下**  
 
@@ -81,6 +80,7 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 
 ![1](/imgs/dsdt1.png)
 
+****
 **找到电池变量位置**
 
 * 在DSDT中搜索 `embeddedcontrol`
