@@ -71,12 +71,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master
 
 ### 系统截图
 
-![1](pic/1.png)
-![1](pic/2.png)
-![1](pic/3.png)
-![1](pic/4.png)
-![1](pic/5.png)
-![1](pic/6.png)
-![1](pic/7.png)
-![1](pic/8.png)
-![1](pic/9.png)
+![1](/pic/1.png)
+![1](/pic/2.png)
+![1](/pic/3.png)
+![1](/pic/4.png)
+![1](/pic/5.png)
+![1](/pic/6.png)
+![1](/pic/7.png)
+![1](/pic/8.png)
+![1](/pic/9.png)
