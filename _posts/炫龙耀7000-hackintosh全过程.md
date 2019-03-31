@@ -39,34 +39,34 @@ tags: hackintosh
 * fn键可用 fn+f1睡眠，fn+f2锁win键，fn+f3打印， fn + f11/f12为 f14 f15, fn键盘灯音量硬件支持  num键(部分情况可用 如终端)可用 
 
 ### 定制usb
-[定制usb教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)
+* [定制usb教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)
 
 ### 调整 macOS CPU性能
-[使用方法](https://github.com/daliansky/XiaoMi-Pro/blob/master/one-key-cpufriend/README_CN.md)
+* [使用方法](https://github.com/daliansky/XiaoMi-Pro/blob/master/one-key-cpufriend/README_CN.md)
 ``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro/master/one-key-cpufriend/one-key-cpufriend_cn.sh)"
 ```
 
 ### HIDPI   
-[开启方法](https://github.com/xzhih/one-key-hidpi)
+* [开启方法](https://github.com/xzhih/one-key-hidpi)
 ``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"
 ```
  **感谢 @[冰水加劲Q](https://github.com/xzhih)**
 
 ### 内置网卡无解 
-注意 换网卡可能需要drop dmar, dart =0之类 请根据网卡型号自行驱动
+注意 换网卡可能需要drop dmar, dart=0 之类 请根据网卡型号自行驱动
 * [dw1560驱动教程](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html) 
 * [rehanman-OS-X-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads/) 
 * [rehanman-OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/) 
 * [acidanthera-AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases)
 
 ### sh
-**sh文件夹下camera.sh用于睡眠后重新开启摄像头**
-**huancun.ch用于重建缓存 (需要时终端执行)**
+* sh文件夹下camera.sh用于睡眠后重新开启摄像头
+* huancun.ch用于重建缓存 (需要时终端执行)
 
 ### 触摸板
-**触摸板由[@penghubingzhou](https://github.com/penghubingzhou)大佬驱动(远景触摸群群友[@xc2333](https://github.com/Xc2333)帮忙改成hotpatch)**
+* 触摸板由[@penghubingzhou](https://github.com/penghubingzhou)大佬驱动(远景触摸群群友[@xc2333](https://github.com/Xc2333)帮忙改成hotpatch)
 
 ### 系统截图
 
