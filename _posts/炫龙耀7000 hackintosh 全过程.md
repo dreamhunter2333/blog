@@ -56,6 +56,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro/maste
 ``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"
 ```
+****
  **感谢 @[冰水加劲Q](https://github.com/xzhih)**
 
 ### 内置网卡无解 
