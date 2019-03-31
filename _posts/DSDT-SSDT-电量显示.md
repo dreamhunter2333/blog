@@ -63,6 +63,7 @@ iasl -da -dl *.aml
 iasl -dl *.aml
 ```
   
+
   
 **此时你的目录应该如下**
 
