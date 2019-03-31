@@ -273,7 +273,7 @@ Method (WECB, 3, Serialized)\n
 end;
 
 ```
-
+****
 * 拆分变量 以上面的 `XIF1` 为例
 * 如下加到`txt`中
 
@@ -282,7 +282,7 @@ end;
 # 大于32位的不需要拆
 into device label EC0 code_regex XIF1,\s+16, replace_matched begin X2IF,8,X3IF,8, end;
 ```
-
+****
 * 重命名 引用变量 以上面的 `XIF1` 为例
 * 如下加到`txt`中
 
@@ -292,7 +292,7 @@ into device label EC0 code_regex XIF1,\s+16, replace_matched begin X2IF,8,X3IF,8
 into method label ECBE code_regex \(\^\^PCI0.LPCB.EC0.XIF1 replaceall_matched begin (^^B1B2(PCI0.LPCB.EC0.X2IF, PCI0.LPCB.EC0.X3IF) end;
 into method label _BST code_regex \(\^\^PCI0.LPCB.EC0.XIF1 replaceall_matched begin (^^B1B2(PCI0.LPCB.EC0.X2IF, PCI0.LPCB.EC0.X3IF) end;
 ```
-
+****
 * 对应大于16位的处理请看
 [远景教程1](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1751487)
 [远景教程2](http://bbs.pcbeta.com/viewthread-1751497-1-1.html)
