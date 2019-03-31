@@ -22,10 +22,10 @@ categories: hackintosh
 * 技术的进步让我们可以由clover来加载编译好的DSDT.aml文件在修复ACPI缺陷，使主板更好支持苹果系统。
 
 **提取DSDT**
-* 1.clover 界面 F4 提取到 EFI/CLOVER/ACPI/origin
+* 1.clover 界面 F4 提取到 `EFI/CLOVER/ACPI/origin`
 * 2.MACiASL提取
 * 3.windows、linux提取
-* linux提取 /sys/fireware/acpi/tables 文件夹即可
+* linux提取 `/sys/fireware/acpi/tables` 文件夹即可
 
 ### DSDT/SSDT 的反编译
 
@@ -37,7 +37,7 @@ DBG2    DSDT    FIDT    LPIT    SSDT1   SSDT4   SSDT7   TPM2    data
 
 **只需要dsdt ssdt开头的文件(不包括ssdt-x)**
 
-* linux提取的自行加上后缀aml
+* linux提取的自行加上后缀`aml`
 * DSDT.aml   
 SSDT3.aml  
 SSDT6.aml 
@@ -68,7 +68,7 @@ iasl -dl *.aml
 DSDT.dsl  SSDT2.aml SSDT3.dsl SSDT5.aml SSDT6.dsl SSDT8.aml SSDT9.dsl
 SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 
-* DSDT.dsl 就是我们需要的文件
+* `DSDT.dsl` 就是我们需要的文件
 
 ### DSDT/SSDT 关于电量显示的修改
 
@@ -81,7 +81,7 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 
 **找到电池变量位置**
 
-* 在DSDT中搜索 embeddedcontrol
+* 在DSDT中搜索 `embeddedcontrol`
 * 应该会有如下的一段或几段
 * macos 无法读取超过8字节的数据 因此我们要将超过8字节的数据拆分
 
@@ -141,7 +141,7 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 ```
 
 **找到电池变量引用位置**
-* 以 XIF1 为例 （XIF0没有引用）
+* 以 `XIF1` 为例 （`XIF0`没有引用）
 ``` bash
 # 第一个引用 第二个引用
             Method (ECBE, 0, NotSerialized)
@@ -199,7 +199,7 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 
 **编写电池补丁**
 
-* 新建一个txt
+* 新建一个`txt`
 * 将下面的复制过去
 * 这是电池补丁用到的几个方法
 * 拆分16位
@@ -269,8 +269,8 @@ end;
 
 ```
 
-* 拆分变量 以上面的 XIF1 为例
-* 如下加到txt中
+* 拆分变量 以上面的 `XIF1` 为例
+* 如下加到`txt`中
 
 ``` bash
 # 拆分16位属性
@@ -278,8 +278,8 @@ end;
 into device label EC0 code_regex XIF1,\s+16, replace_matched begin X2IF,8,X3IF,8, end;
 ```
 
-* 重命名 引用变量 以上面的 XIF1 为例
-* 如下加到txt中
+* 重命名 引用变量 以上面的 `XIF1` 为例
+* 如下加到`txt`中
 
 ``` bash
 # 重命名 访问16位属性
@@ -294,15 +294,16 @@ into method label _BST code_regex \(\^\^PCI0.LPCB.EC0.XIF1 replaceall_matched be
 **txt 补丁做好之后 MACiASL 选择patch**
 
 * 加载你的txt文件
-* 点击应用，将dsl 输出为aml
-* 放入 EFI/CLOVER/ACPI/patched/ 下
+* 点击应用，将`dsl` 输出为`aml`
+* 放入 `EFI/CLOVER/ACPI/patched/` 下
 * 重启应该就可以看到电池了
 
 ### DSDT/SSDT 附件
 
-* [github](https://github.com/jinmu333/Shinalon_YAO_7000_efi)
+* [txt文件](https://github.com/jinmu333/Shinalon_YAO_7000_efi/blob/efi/%E8%80%807000%E7%94%B5%E6%B1%A0.txt)
 
 **我的 txt 补丁**
+
 ``` bash
 # created by jinmu333
 #炫龙耀7000
