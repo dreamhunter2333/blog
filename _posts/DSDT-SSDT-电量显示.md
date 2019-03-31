@@ -22,6 +22,7 @@ categories: hackintosh
 * 技术的进步让我们可以由clover来加载编译好的DSDT.aml文件在修复ACPI缺陷，使主板更好支持苹果系统。
 
 **提取DSDT**
+
 * 1.clover 界面 F4 提取到 `EFI/CLOVER/ACPI/origin`
 * 2.MACiASL提取
 * 3.windows、linux提取
@@ -61,7 +62,7 @@ iasl -da -dl *.aml
 # 无法联合反编译 请尝试
 iasl -dl *.aml
 ```
-
+\
 **此时你的目录应该如下**
 
 * DSDT.aml  SSDT1.dsl SSDT3.aml SSDT4.dsl SSDT6.aml SSDT7.dsl SSDT9.aml
