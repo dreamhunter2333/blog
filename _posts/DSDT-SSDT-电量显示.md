@@ -80,7 +80,6 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
 
 ![1](/imgs/dsdt1.png)
 
-****
 **找到电池变量位置**
 
 * 在DSDT中搜索 `embeddedcontrol`
@@ -142,10 +141,11 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
             }
 ```
 
-
+****
 **找到电池变量引用位置**
 
 * 以 `XIF1` 为例 （`XIF0`没有引用）
+
 ``` bash
 # 第一个引用 第二个引用
             Method (ECBE, 0, NotSerialized)
