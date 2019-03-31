@@ -287,9 +287,10 @@ into device label EC0 code_regex XIF1,\s+16, replace_matched begin X2IF,8,X3IF,8
 into method label ECBE code_regex \(\^\^PCI0.LPCB.EC0.XIF1 replaceall_matched begin (^^B1B2(PCI0.LPCB.EC0.X2IF, PCI0.LPCB.EC0.X3IF) end;
 into method label _BST code_regex \(\^\^PCI0.LPCB.EC0.XIF1 replaceall_matched begin (^^B1B2(PCI0.LPCB.EC0.X2IF, PCI0.LPCB.EC0.X3IF) end;
 ```
+
 * 对应大于16位的处理请看
-[远景](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1751487)
-[远景](http://bbs.pcbeta.com/viewthread-1751497-1-1.html)
+[远景教程1](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1751487)
+[远景教程2](http://bbs.pcbeta.com/viewthread-1751497-1-1.html)
 
 **txt 补丁做好之后 MACiASL 选择patch**
 
