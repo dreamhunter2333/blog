@@ -11,17 +11,17 @@ tags: hackintosh
 
 ### 电脑配置
 
-| 规格     | 详细信息                                                |
-| -------- | ----------------------------------------------------- |
-| 电脑型号 | 炫龙 耀7000 笔记本电脑                                    |
-| 操作系统 | macOS Mojave 18D42                                   |
-| 处理器   | 英特尔 Core i5-8300H @ 2.30GHz 四核                   |
-| 内存     | 16 GB ( 镁光 DDR4 2666MHz )                           |
-| 硬盘     | INTEL 760P (256 GB / NVME固态硬盘 )                       |
-| 显卡     | 英特尔 UHD Graphics 630 (platform-id:0x3E9B0000)       |
-| 显示器   | 京东方 BOE  1920x1080 (15.6 英寸)                      |
-| 声卡     | ALC269 (layout-id:8)                                 |
-| 网卡     | 英特尔网卡已更换为Bcm94352ZAE(DW1560)                     |
+*  规格     | 详细信息                                                |
+* -------- | ----------------------------------------------------- |
+*  电脑型号 | 炫龙 耀7000 笔记本电脑                                    |
+*  操作系统 | macOS Mojave 18D42                                   |
+*  处理器   | 英特尔 Core i5-8300H @ 2.30GHz 四核                   |
+*  内存     | 16 GB ( 镁光 DDR4 2666MHz )                           |
+*  硬盘     | INTEL 760P (256 GB / NVME固态硬盘 )                       |
+*  显卡     | 英特尔 UHD Graphics 630 (platform-id:0x3E9B0000)       |
+*  显示器   | 京东方 BOE  1920x1080 (15.6 英寸)                      |
+*  声卡     | ALC269 (layout-id:8)                                 |
+*  网卡     | 英特尔网卡已更换为Bcm94352ZAE(DW1560)                     |
 
 ### 安装镜像
 
@@ -60,10 +60,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master
 
 ### 内置网卡无解 
 注意 换网卡可能需要drop dmar, dart =0之类 请根据网卡型号自行驱动
-[dw1560驱动教程](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html) \
-[rehanman-OS-X-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads/) \
-[rehanman-OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/) \
-[acidanthera-AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases)
+* [dw1560驱动教程](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html) 
+* [rehanman-OS-X-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads/) 
+* [rehanman-OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/) 
+* [acidanthera-AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases)
 
 ### sh文件夹下camera.sh用于睡眠后重新开启摄像头 huancun.ch用于重建缓存 (需要时终端执行)
 
