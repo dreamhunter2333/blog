@@ -21,7 +21,7 @@ tags: hackintosh
 
 ### 安装镜像
 
-直接使用黑果小兵博客中的镜像进行安装：[【黑果小兵】macOS Mojave 10.14.3 18D42 正式版 with Clover 4859原版镜像](https://blog.daliansky.net/macOS-Mojave-10.14.3-18D42-official-version-with-Clover-4859-original-image.html)
+** 直接使用黑果小兵博客中的镜像进行安装：[【黑果小兵】macOS Mojave 10.14.3 18D42 正式版 with Clover 4859原版镜像](https://blog.daliansky.net/macOS-Mojave-10.14.3-18D42-official-version-with-Clover-4859-original-image.html)**
 
 ### CLOVER
 
@@ -61,9 +61,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master
 * [rehanman-OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/) 
 * [acidanthera-AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases)
 
-### sh文件夹下camera.sh用于睡眠后重新开启摄像头 huancun.ch用于重建缓存 (需要时终端执行)
+### **sh文件夹下camera.sh用于睡眠后重新开启摄像头 huancun.ch用于重建缓存 (需要时终端执行)**
 
-### 触摸板由[@penghubingzhou](https://github.com/penghubingzhou)大佬驱动(远景触摸群群友[@xc2333](https://github.com/Xc2333)帮忙改成hotpatch)
+### **触摸板由[@penghubingzhou](https://github.com/penghubingzhou)大佬驱动(远景触摸群群友[@xc2333](https://github.com/Xc2333)帮忙改成hotpatch)**
 
 ### 系统截图
 
