@@ -62,7 +62,8 @@ iasl -da -dl *.aml
 # 无法联合反编译 请尝试
 iasl -dl *.aml
 ```
-\
+
+
 **此时你的目录应该如下**
 
 * DSDT.aml  SSDT1.dsl SSDT3.aml SSDT4.dsl SSDT6.aml SSDT7.dsl SSDT9.aml
@@ -141,7 +142,9 @@ SSDT1.aml SSDT2.dsl SSDT4.aml SSDT5.dsl SSDT7.aml SSDT8.dsl
             }
 ```
 
+
 **找到电池变量引用位置**
+
 * 以 `XIF1` 为例 （`XIF0`没有引用）
 ``` bash
 # 第一个引用 第二个引用
