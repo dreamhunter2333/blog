@@ -63,7 +63,8 @@ iasl -da -dl *.aml
 iasl -dl *.aml
 ```  
 
-**此时你的目录应该如下**
+
+**此时你的目录应该如下**  
 
 * DSDT.aml  SSDT1.dsl SSDT3.aml SSDT4.dsl SSDT6.aml SSDT7.dsl SSDT9.aml
 DSDT.dsl  SSDT2.aml SSDT3.dsl SSDT5.aml SSDT6.dsl SSDT8.aml SSDT9.dsl
