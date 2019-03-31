@@ -61,10 +61,8 @@ iasl -da -dl *.aml
 
 # 无法联合反编译 请尝试
 iasl -dl *.aml
-```
-  
+```  
 
-  
 **此时你的目录应该如下**
 
 * DSDT.aml  SSDT1.dsl SSDT3.aml SSDT4.dsl SSDT6.aml SSDT7.dsl SSDT9.aml
