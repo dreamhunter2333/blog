@@ -15,7 +15,7 @@ categories: hackintosh
 
 ### DSDT/SSDT 如何提取 反编译 请看这篇
 
-[DSDT提取](https://jcstaff.club/2019/03/31/DSDT-SSDT-%E7%94%B5%E9%87%8F%E6%98%BE%E7%A4%BA/)
+* [DSDT提取](https://jcstaff.club/2019/03/31/DSDT-SSDT-%E7%94%B5%E9%87%8F%E6%98%BE%E7%A4%BA/)
 
 ### 在 DSDT 中查找亮度调节方法
 
