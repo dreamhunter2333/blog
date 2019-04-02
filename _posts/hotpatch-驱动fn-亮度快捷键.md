@@ -20,7 +20,6 @@ categories: hackintosh
 ### 在 DSDT 中查找亮度调节方法
 
 * 类似下面的方法
-
 ``` bash
 Notify (^^^GFX0.DD1F, 0x87)
 Notify (^^^GFX0.DD1F, 0x86)
