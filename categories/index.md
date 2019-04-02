@@ -6,4 +6,4 @@ type: "categories"
 * [hello world](/categories/hello-world/)
 * [xampp](/categories/xampp/)
 * [酸酸乳](/categories/酸酸乳/)
-* [hackintosh](categories/hackintosh/)
+* [hackintosh](/categories/hackintosh/)
