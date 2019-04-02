@@ -4,6 +4,8 @@ date: 2019-04-02 20:55:26
 tags: hackintosh
 categories: hackintosh
 ---
+## 针对 intel 核显
+
 ### 为什么要驱动 Fn 亮度快捷键？
 
 * fn+功能键直接调节亮度
