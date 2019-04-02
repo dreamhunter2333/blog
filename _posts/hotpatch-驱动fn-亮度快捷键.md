@@ -20,10 +20,10 @@ categories: hackintosh
 ### 在 DSDT 中查找亮度调节方法
 
 * 类似下面的方法
-``` bash
+含有这两句的
 Notify (^^^GFX0.DD1F, 0x87)
 Notify (^^^GFX0.DD1F, 0x86)
-```
+
 
 ``` bash
             Method (_Q14, 0, NotSerialized)  // _Qxx: EC Query
