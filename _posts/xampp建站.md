@@ -43,11 +43,7 @@ wget http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/5.6.14/xampp-linu
 ### 三、将网站搭载在服务器
 
 * /opt/lampp/htdocs/ 这个目录就是存放网站的目录
-
 假如我把speedtest文件夹放在这个目录下 xxx.xxx.xxx.xxx/speedtest 就是访问地址
-
 xxx.xxx.xxx.xxx 为你的ip地址或域名
-
 若不能访问请 chmod -R 777 你的网站目录
-
-* /opt/lampp/htdocs/index.php 这个文件可以修改ip或域名指向的目录*
+/opt/lampp/htdocs/index.php 这个文件可以修改ip或域名指向的目录*
