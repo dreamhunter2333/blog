@@ -50,4 +50,4 @@ xxx.xxx.xxx.xxx 为你的ip地址或域名
 
 若不能访问请 chmod -R 777 你的网站目录
 
-/opt/lampp/htdocs/index.php 这个文件可以修改ip或域名指向的目录
+* /opt/lampp/htdocs/index.php 这个文件可以修改ip或域名指向的目录*
