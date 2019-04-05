@@ -15,7 +15,6 @@ categories: xampp
 # 命令来查看并确定linux 操作系统版本。
 # 输出：32表明系统是32位
 # 输出：64表明系统是64位。
-
 getconf LONG_BIT
 
 ```
@@ -43,7 +42,7 @@ wget http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/5.6.14/xampp-linu
 
 ### 三、将网站搭载在服务器
 
-*/opt/lampp/htdocs/ 这个目录就是存放网站的目录
+* /opt/lampp/htdocs/ 这个目录就是存放网站的目录
 
 假如我把speedtest文件夹放在这个目录下 xxx.xxx.xxx.xxx/speedtest 就是访问地址
 
