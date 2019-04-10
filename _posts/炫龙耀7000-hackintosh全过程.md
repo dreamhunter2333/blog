@@ -1,6 +1,6 @@
 ---
-title: 炫龙耀7000 hackintosh 全过程
-date: 2019-03-31 12:10:12
+title: 炫龙耀7000-hackintosh全过程
+date: 2019-03-31 12:10:13
 tags: hackintosh
 categories: hackintosh
 ---
