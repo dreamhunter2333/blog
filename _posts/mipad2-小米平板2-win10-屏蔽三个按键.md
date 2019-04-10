@@ -15,7 +15,7 @@ categories: mipad2
 ****
 * 
 #### 更改红方块中的驱动
-* ![mipad2-1](/imgs/mipad2/mipad2-1.jpg)
+![mipad2-1](/imgs/mipad2/mipad2-1.jpg)
 ****
 * 
 #### 更新三个HID KeyboardDevice驱动为HID-compliant device
