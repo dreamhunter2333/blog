@@ -8,3 +8,4 @@ type: "categories"
 * [酸酸乳](/categories/酸酸乳/)
 * [hackintosh](/categories/hackintosh/)
 * [hexo](/categories/hexo/)
+* [mipad2](/categories/mipad2/)

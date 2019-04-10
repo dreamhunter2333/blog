@@ -39,7 +39,7 @@ categories: mipad2
 #### 更新HID for FocalTech Touch驱动
 ![mipad2-1](/imgs/mipad2/mipad2-6.jpg)
 ****
-*
+* 
 #### 用同样的方法改为I2C HID设备
 #### 改完以后，I2C HID设备驱动有感叹号，触摸屏同时也不能使用，用鼠标重启windows
 #### 至此，触摸屏恢复正常，三个按键完全被禁用。
