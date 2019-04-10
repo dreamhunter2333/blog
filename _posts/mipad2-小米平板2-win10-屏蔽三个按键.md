@@ -44,4 +44,3 @@ categories: mipad2
 #### 改完以后，I2C HID设备驱动有感叹号，触摸屏同时也不能使用，用鼠标重启windows
 #### 至此，触摸屏恢复正常，三个按键完全被禁用。
 ![mipad2-1](/imgs/mipad2/mipad2-7.jpg)
-****
