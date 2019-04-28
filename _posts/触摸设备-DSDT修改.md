@@ -1,5 +1,5 @@
 ---
-title: 触摸设备 DSDT修改
+title: 触摸设备 DSDT修改(转载)
 date: 2019-04-28 18:32:01
 tags: hackintosh
 categories: hackintosh
