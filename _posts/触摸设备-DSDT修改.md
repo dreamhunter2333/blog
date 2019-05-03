@@ -326,7 +326,7 @@ categories: hackintosh
 
          **像这样：**
 
-         ![7Gen](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/7-SSCN-FMCN.png)
+   ![7Gen](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/7-SSCN-FMCN.png)
 
          **如果不理想，再尝试这个：**
 
