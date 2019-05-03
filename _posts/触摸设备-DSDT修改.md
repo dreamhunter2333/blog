@@ -295,7 +295,7 @@ categories: hackintosh
 		            ...
          ```
          
-         `SSDT-USTP.dsl`和`clover Acpi`重命名内容
+         下面是`SSDT-USTP.dsl`和`clover Acpi`重命名的内容
          
          ```asl
          /*
@@ -326,7 +326,7 @@ categories: hackintosh
 
          **像这样：**
 
-   ![7Gen](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/7-SSCN-FMCN.png)
+         ![7Gen](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/7-SSCN-FMCN.png)
 
          **如果不理想，再尝试这个：**
 
