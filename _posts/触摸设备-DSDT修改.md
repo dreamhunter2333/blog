@@ -272,9 +272,9 @@ categories: hackintosh
          Request for HID descriptor failed
          ```
 
-         **解决方案：**  
+         **解决方案：**
          
-         **如果你有原生的这两个常量**  
+         **如果你有原生的这两个常量**
          
          像下面这样，请尝试添加`SSDT-USTP`,并进行`clover Acpi`重命名
          
