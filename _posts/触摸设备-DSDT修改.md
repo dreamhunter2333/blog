@@ -4,10 +4,11 @@ date: 2019-04-28 18:32:01
 tags: hackintosh
 categories: hackintosh
 ---
-### 原文
+## 原文
+
 [原文链接](https://github.com/williambj1/VoodooI2C-PreRelease/blob/master/%E8%A7%A6%E6%91%B8%E6%9D%BF%E8%A1%A5%E5%85%85.md)
 
-# 触摸设备 DSDT 修补补充
+## 触摸设备 DSDT 修补补充
 
 ## 致刚接触触摸板的小白
 
@@ -273,49 +274,50 @@ categories: hackintosh
          ```
 
          **解决方案：**
-         
+
          **如果你有原生的这两个常量**
-         
+
          像下面这样，请尝试添加`SSDT-USTP`,并进行`clover Acpi`重命名
-         
+
          ```asl
-		    If (USTP)
-		    {
-		        Scope (_SB.PCI0.I2C0)
-		        {
-		            Method (SSCN, 0, NotSerialized)
-		            {
-		                Return (PKG3 (SSH0, SSL0, SSD0))
-		            }
-		
-		            Method (FMCN, 0, NotSerialized)
-		            {
-		                Return (PKG3 (FMH0, FML0, FMD0))
-		            }
-		            ...
+         If (USTP)
+         {
+         Scope (_SB.PCI0.I2C0)
+         {
+               Method (SSCN, 0, NotSerialized)
+               {
+                  Return (PKG3 (SSH0, SSL0, SSD0))
+               }
+
+               Method (FMCN, 0, NotSerialized)
+               {
+                  Return (PKG3 (FMH0, FML0, FMD0))
+               }
+               ...
          ```
+
          下面是`SSDT-USTP.dsl`和`clover Acpi`重命名的内容
-         
+
          ```asl
          /*
-			* Config ACPI, USTP, 8 TO XSTP, 8
-			* Find:     55535450 08
-			* Replace:  58535450 08
-			* TgtBridge:no
-			*/
-			#ifndef NO_DEFINITIONBLOCK
-			DefinitionBlock("", "SSDT", 2, "hack", "PS2M", 0)
-			{
-			#endif
-				Name (USTP, One)
-			#ifndef NO_DEFINITIONBLOCK
-			}
-			#endif
-			//EOF
+         * Config ACPI, USTP, 8 TO XSTP, 8
+         * Find:     55535450 08
+         * Replace:  58535450 08
+         * TgtBridge:no
+         */
+         #ifndef NO_DEFINITIONBLOCK
+         DefinitionBlock("", "SSDT", 2, "hack", "USTP", 0)
+         {
+         #endif
+            Name (USTP, One)
+         #ifndef NO_DEFINITIONBLOCK
+         }
+         #endif
+         //EOF
          ```
 
          **如果你没有原生的这两个常量**
-         
+
          在你的DSDT的触摸板设备上方加上这个，在加入之前，请确认你有没有原生的这两个常量，请根据报错内容选择性食用
 
          ```asl
