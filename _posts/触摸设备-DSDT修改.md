@@ -294,7 +294,6 @@ categories: hackintosh
 		            }
 		            ...
          ```
-         
          下面是`SSDT-USTP.dsl`和`clover Acpi`重命名的内容
          
          ```asl
