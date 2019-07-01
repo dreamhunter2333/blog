@@ -10,6 +10,14 @@ categories: hackintosh
 
 ## 触摸设备 DSDT 修补补充
 
+## 致那些无脑放完驱动就能用了的小小小白
+
+> VoodoI2C 不同于仍和一个其他的黑苹果驱动，直接将驱动放入 Clover 或者 L/E 是 **完全错误** 的做法，根据个人经验，高达 90% 以上的设备都默认使用 APIC 中断，只有极少数都设备默认  使用 GPIO 中断，然而，又因为绝大多数设备的 IOInterruptSpecifiers 都大于 2F，因此 APIC 中断控制器根本就不会工作，所以，即使你把驱动放进去能用了，也是极为低效的轮询模式，如果你阅读完 [群主博客](https://www.penghubingzhou.cn/) 和 本篇教程，你会发现这个问题显而易见。
+
+![Circumstances](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Circumstances.png)
+
+> 仅有极少数情况默认就能正确驱动
+
 ## 致刚接触触摸板的小白
 
 > 在看这篇文章前，请仔细阅读[群主博客](https://www.penghubingzhou.cn/)，这篇文章旨在补充教程中没有的小细节，文章啰嗦但非常详细（废话连篇），请您耐心阅读（别光欣赏图片去了😝）
@@ -34,9 +42,9 @@ categories: hackintosh
    > 中断则是你触摸板的正常工作方式 (Windows / Linux 中即是如此)。
 
    - 在 DSDT 的修改中我们这样定义：（请仔细阅读下文👇）。
-   > GPIO 中断：DSDT 在 `SBFG` 中存在有效 `GPIO Pin`，`CRS` 方法中返回 `(SBFB,SBFG)`，并应用启用 `GPIO` 控制器的补丁。
-   > APIC 中断：（注意，不是 ACPI）当你的 IOInterruptSpecifiers 值**没有**或者小于`2F(16进制)`时，此时就是 APIC 中断，无需对 DSDT 进行大量修改，只用应用 `Windows(20XX) 补丁`即可。此时使用的是 APIC 控制器而不是 GPIO 控制器。
-   > 轮询：DSDT 中除了 `Windows(20XX)` 补丁以外，不应用其他补丁，CRS 方法中只返回 `SBFB` 或者 `(SBFB,SBFI)`。
+   > **GPIO 中断：** DSDT 在 `SBFG` 中存在有效 `GPIO Pin`，`CRS` 方法中返回 `(SBFB,SBFG)`，并应用启用 `GPIO` 控制器的补丁。  
+   > **APIC 中断：** （注意，不是 ACPI）当你的 IOInterruptSpecifiers 值 **没有** 或者小于`2F(16进制)`时，此时就是 APIC 中断，无需对 DSDT 进行大量修改，只用应用 `Windows(20XX) 补丁`即可。此时使用的是 APIC 控制器而不是 GPIO 控制器。  
+   > **轮询：** DSDT 中除了 `Windows(20XX)` 补丁以外，不应用其他补丁，CRS 方法中只返回 `SBFB` 或者 `(SBFB,SBFI)`。
 1. Dalao! 到底是中断好还是轮询好？😖
    - 正如上文所述，中断才是触摸板的正确驱动方式，但受到 VoodooI2C 驱动，苹果触摸驱动及自身设备 GPIO 特殊性等等原因，有些设备只能通过**轮询**的方式驱动，轮询就像 Windows 里的**安全模式**，因为触摸板本身就不是设计来在一定时间不断轮询的，所以注定有 `Bug` 比如指针漂移，少手指等等，但是用这种方式驱动总比没有驱动强。
 1. Dalao! DSDT 里我找不到我的触摸板啊，搜不到 `SBFG` 怎么办？
@@ -140,7 +148,7 @@ categories: hackintosh
 
 ## 排错
 
-### 五国
+### I. 五国
 
 - 由于五国状况复杂这里只提供一个能减少五国概率的方法，如果还是一样，请拍照发群里
   1. 打开 VoodooI2C.kext⁩ ▸ 右键 ▸ 显示包内容 ▸ ⁨Contents⁩ ▸ Info.plist (用 Xcode, PlistEdit Pro 或者 VS Code 打开 **千万别用 Clover Configurator**) 这里以 VS Code 为例
@@ -148,20 +156,24 @@ categories: hackintosh
   1. 往下翻一点找到这些
 
      ```plist
-     <string>pci8086,9d60</string>
-     <string>pci8086,9d61</string>
-     <string>pci8086,a160</string>
-     <string>pci8086,a161</string>
-     <string>pci8086,a162</string>
-     <string>pci8086,a368</string>
-     <string>pci8086,a369</string>
+         <string>pci8086,9d60</string>
+         <string>pci8086,9d61</string>
+         <string>pci8086,9d62</string>
+         <string>pci8086,9d63</string>
+         <string>pci8086,9de8</string>
+         <string>pci8086,9de9</string>
+         <string>pci8086,a160</string>
+         <string>pci8086,a161</string>
+         <string>pci8086,a162</string>
+         <string>pci8086,a368</string>
+         <string>pci8086,a369</string>
      ```
 
   1. 在 Windows 里查看你设备使用的是哪一个，删掉其他的，保留你用的
 
      ![a369](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/a369.png)
 
-### 学会使用 maclog 提取日志
+### II. 学会使用 maclog 提取日志
 
 ![maclog](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/maclog.png)
 
@@ -176,9 +188,9 @@ categories: hackintosh
 - 将文本复制粘贴到记事本中
 - 保存好文本文档
 
-### 确保你使用了正确 `VoodooI2C` 及附属驱动，不能多也不能少
+### III. 确保你使用了正确 `VoodooI2C` 及附属驱动，不能多也不能少
 
-### 查看 `IORegisteryExplorer` 里 `VoodooI2C` 是否正常加载
+### IV. 查看 `IORegisteryExplorer` 里 `VoodooI2C` 是否正常加载
 
    1. 不正常1:
 
@@ -194,52 +206,55 @@ categories: hackintosh
 
            ![Disable-XCode](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Disable2.png)
 
-        <details>
-        <summary>3. 文本法（点击此处以展开）</summary>
+        3. 文本法
+         <details>
+         <summary>（点击此处以展开）</summary>
 
-           ```plist
-                <key>KextsToPatch</key>
-                    <array>
-                        <dict>
-                            <key>Comment</key>
-                            <string>Disable AppleIntelLpssI2C (credit by Coolstar)</string>
-                            <key>Disabled</key>
-                            <false/>
-                            <key>Find</key>
-                            <data>
-                            SU9LaXQ=
-                            </data>
-                            <key>InfoPlistPatch</key>
-                            <true/>
-                            <key>Name</key>
-                            <string>AppleIntelLpssI2C</string>
-                            <key>Replace</key>
-                            <data>
-                            SU9LaXM=
-                            </data>
-                        </dict>
-                        <dict>
-                            <key>Comment</key>
-                            <string>Disable AppleIntelLpssI2CCOntroller (credit by Coolstar)</string>
-                            <key>Disabled</key>
-                            <false/>
-                            <key>Find</key>
-                            <data>
-                            SU9LaXQ=
-                            </data>
-                            <key>InfoPlistPatch</key>
-                            <true/>
-                            <key>Name</key>
-                            <string>AppleIntelLpssI2CController</string>
-                            <key>Replace</key>
-                            <data>
-                            SU9LaXM=
-                            </data>
-                        </dict>
-                    </array>
-           ```
+            ```plist
+                 <key>KextsToPatch</key>
+                     <array>
+                         <dict>
+                             <key>Comment</key>
+                             <string>Disable AppleIntelLpssI2C (credit by Coolstar)    </string>
+                             <key>Disabled</key>
+                             <false/>
+                             <key>Find</key>
+                             <data>
+                             SU9LaXQ=
+                             </data>
+                             <key>InfoPlistPatch</key>
+                             <true/>
+                             <key>Name</key>
+                             <string>AppleIntelLpssI2C</string>
+                             <key>Replace</key>
+                             <data>
+                             SU9LaXM=
+                             </data>
+                         </dict>
+                         <dict>
+                             <key>Comment</key>
+                             <string>Disable AppleIntelLpssI2CCOntroller (credit by     Coolstar)</string>
+                             <key>Disabled</key>
+                             <false/>
+                             <key>Find</key>
+                             <data>
+                             SU9LaXQ=
+                             </data>
+                             <key>InfoPlistPatch</key>
+                             <true/>
+                             <key>Name</key>
+                             <string>AppleIntelLpssI2CController</string>
+                             <key>Replace</key>
+                             <data>
+                             SU9LaXM=
+                             </data>
+                         </dict>
+                     </array>
+            ```
 
-        </details>
+         </details>
+
+      - 暴力删除法：进入 `/System/Library/Extensions/` 删除这两个驱动 **AppleIntelLpssI2C** & **AppleIntelLpssI2CController**
 
    1. 不正常2:
 
@@ -275,50 +290,17 @@ categories: hackintosh
 
          **解决方案：**
 
-         **如果你有原生的这两个常量**
+         使用 SSDT-I2CxConf 修补 I2C 速度常量 SSCN 和 FMCN
 
-         像下面这样，请尝试添加`SSDT-USTP`,并进行`clover Acpi`重命名
+         使用方法  
+              1. 将 [SSDT-I2CxConf.dsl](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/SSDT-I2CxConf.dsl) 另存为编译成 SSDT-I2CxConf.aml  
+              2. 在 Clover 中添加如下重命名：
 
-         ```asl
-         If (USTP)
-         {
-         Scope (_SB.PCI0.I2C0)
-         {
-               Method (SSCN, 0, NotSerialized)
-               {
-                  Return (PKG3 (SSH0, SSL0, SSD0))
-               }
+         ![Rename SSCN FMCN](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Rename-SSCN-FMCN.png)
 
-               Method (FMCN, 0, NotSerialized)
-               {
-                  Return (PKG3 (FMH0, FML0, FMD0))
-               }
-               ...
-         ```
+         **如果依旧没有效果**
 
-         下面是`SSDT-USTP.dsl`和`clover Acpi`重命名的内容
-
-         ```asl
-         /*
-         * Config ACPI, USTP, 8 TO XSTP, 8
-         * Find:     55535450 08
-         * Replace:  58535450 08
-         * TgtBridge:no
-         */
-         #ifndef NO_DEFINITIONBLOCK
-         DefinitionBlock("", "SSDT", 2, "hack", "USTP", 0)
-         {
-         #endif
-            Name (USTP, One)
-         #ifndef NO_DEFINITIONBLOCK
-         }
-         #endif
-         //EOF
-         ```
-
-         **如果你没有原生的这两个常量**
-
-         在你的DSDT的触摸板设备上方加上这个，在加入之前，请确认你有没有原生的这两个常量，请根据报错内容选择性食用
+         删除上方的改动，在你的DSDT的触摸板设备上方加上这个：
 
          ```asl
          Name (SSCN, Package () { 528, 640, 30 })
@@ -349,7 +331,19 @@ categories: hackintosh
          Could not get HID descriptor
          ```
 
-         **解决方案：** 在你的DSDT的触摸板设备上方加上这个
+         **解决方案：**
+
+         使用 SSDT-I2CxConf 修补 I2C 速度常量 SSCN 和 FMCN
+
+         使用方法  
+              1. 将 [SSDT-I2CxConf.dsl](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/SSDT-I2CxConf.dsl) 另存为编译成 SSDT-I2CxConf.aml  
+              2. 在 Clover 中添加如下重命名：
+
+         ![Rename SSCN FMCN](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Rename-SSCN-FMCN.png)
+
+         **如果依旧没有效果**
+
+         删除上方的改动，在你的DSDT的触摸板设备上方加上这个
 
          ```asl
          Method (SSCN, 0, NotSerialized)
@@ -391,13 +385,13 @@ categories: hackintosh
 
          ![8Gen](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/8-SSCN-FMCN.png)
 
-### 尝试**输入密码登陆界面**或者**不带鼠标开机**能不能使用触摸板
+### V. 尝试**输入密码登陆界面**或者**不带鼠标开机**能不能使用触摸板
 
 - 如果可以，请进入 偏好设置 ▸ 辅助功能 ▸ 鼠标与触控板 ▸ **取消勾选** `有鼠标或无线触控板时忽略内建触摸板`
 
   ![Ignore](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Ignore.png)
 
-### 驱动放进 `Library/Extensions`，然后重建缓存
+### VI. 驱动放进 `Library/Extensions`，然后重建缓存
 
    ![L/E](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/L-E.png)
 
@@ -407,7 +401,7 @@ categories: hackintosh
    sudo kextcache -i/
    ```
 
-### 尝试睡眠唤醒
+### VII. 尝试睡眠唤醒
 
 ### 如果还是不行，请提交一下内容
 
@@ -430,6 +424,8 @@ categories: hackintosh
    ![Success1](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Success.png)
 
    ![Success2](https://raw.githubusercontent.com/williambj1/VoodooI2C-PreRelease/master/IMG/Success2.png)
+
+[//]: <> (## 手势问题及解决方案)
 
 ## 鸣谢
 
