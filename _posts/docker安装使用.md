@@ -40,3 +40,30 @@ docker-compose -f docker-compose-win.yaml down
 # linux/mac:
 docker-compose -f docker-compose.yaml down
 ```
+
+### docker查看镜像
+
+```bash
+docker images
+
+docker image list
+```
+
+### docker查看容器
+
+```bash
+# 启动容器
+docker start "ONTAINER ID"
+
+# 停止容器
+docker stop "ONTAINER ID"
+
+# 启动的容器
+docker ps
+
+# 进入容器终端
+docker exec -it "ONTAINER ID" /bin/bash
+
+# 停止的容器
+docker ps -a
+```
