@@ -18,7 +18,7 @@ brew cask install docker
 docker build -f ./Dockerfile -t debian:sketch .
 ```
 
-### Windows 需要创建 local volume
+### Windows要创建localvolume
 
 ```bash
 # Windows 需要创建 local volume
