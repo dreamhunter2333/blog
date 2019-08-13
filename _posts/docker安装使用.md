@@ -13,7 +13,7 @@ categories: docker
 brew cask install docker
 
 # 构建开发镜像
-docker build -f ./Dockerfile -t pscloud-dev:1.0 .
+docker build -f ./Dockerfile -t debian:sketch .
 ```
 
 ```bash
