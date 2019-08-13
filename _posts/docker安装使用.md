@@ -7,6 +7,8 @@ categories: docker
 
 ## docker安装使用
 
+### 安装,构建开发镜像
+
 ```bash
 # windows下载安装即可
 # mac
@@ -16,10 +18,14 @@ brew cask install docker
 docker build -f ./Dockerfile -t debian:sketch .
 ```
 
+### Windows 需要创建 local volume
+
 ```bash
 # Windows 需要创建 local volume
 # docker volume create --name pscloud-postgresql-volume -d local
 ```
+
+### 启动 停止
 
 ```bash
 # 启动
