@@ -22,7 +22,7 @@ docker build -f ./Dockerfile -t debian:sketch .
 
 ```bash
 # Windows 需要创建 local volume
-# docker volume create --name pscloud-postgresql-volume -d local
+docker volume create --name pscloud-postgresql-volume -d local
 ```
 
 ### 启动 停止
