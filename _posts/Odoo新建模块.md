@@ -130,3 +130,13 @@ class Library(models.Model):
     </field>
 </record>
 ```
+
+## data中的xml写入预置数据
+
+> 方便模块测试在安装时预置数据
+```xml
+<!-- 向模型library.partner中写入一条记录 -->
+<record id="object0" model="library.partner">
+    <field name="name">作者甲</field>
+</record>
+```
