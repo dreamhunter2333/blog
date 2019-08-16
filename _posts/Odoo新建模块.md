@@ -36,7 +36,7 @@ pyhton3 odoo/odoo-bin scaffold <module name> <where to put it>
 > `data/*.xml`      预置数据文件  
 > `security/ir.model.access.csv`: 外部id相关
 
-## `__manifest__.py`各字段定义
+## __manifest__.py各字段定义
 
 ![](/imgs/odoo-model/manifest.png)
 
@@ -48,9 +48,9 @@ pyhton3 odoo/odoo-bin scaffold <module name> <where to put it>
 > `application`: True 是否为应用  
 > `auto_install`: False 是否在依赖都已安装时自动安装
 
-**`date`中的文件要注意排列顺序**
+**data中的文件要注意排列顺序**
 
-## `models`中python文件的对象(模型,类,表)、字段
+## models中python文件的对象(模型,类,表)、字段
 
 ```python
 # -*- coding: utf-8 -*-
@@ -77,7 +77,7 @@ class Library(models.Model):
 > `_name`: 引用时使用的对象名称  
 > `fields.Xxxx`: 各种字段   
 
-## `views`各种视图定义
+## views各种视图定义
 
 > `menuitem`: 菜单定义
 ```xml
