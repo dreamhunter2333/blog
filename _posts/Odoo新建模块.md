@@ -25,9 +25,9 @@ docker exec -it <CONTAINER ID> /bin/bash
 # 进入容器后终端执行
 pyhton3 odoo/odoo-bin scaffold <module name> <where to put it>
 ```
-> 生成的模块如图所示
+> 生成的模块如图所示  
 
-![](../imgs/odoo-model/newmodel.png)
+![](/imgs/odoo-model/newmodel.png)  
 
 > `__manifest__.py` Odoo模块声明文件  
 > `__init__.py`     python模块声明导入  
