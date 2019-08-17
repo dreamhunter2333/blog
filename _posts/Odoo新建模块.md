@@ -13,7 +13,7 @@ categories:
 
 ## 利用odoo-bin命令新建模块
 
->在docker中利用odoo-bin命令新建模块
+> 在docker中利用odoo-bin命令新建模块
 
 ```bash
 # 启动docker中的容器
