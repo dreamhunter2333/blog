@@ -1,6 +1,6 @@
 ---
 title: Odoo Domain 波兰表示法
-date: 2019-08-17 14:34:19
+date: 2019-08-16 14:34:19
 tags: odoo
 categories: odoo
 ---

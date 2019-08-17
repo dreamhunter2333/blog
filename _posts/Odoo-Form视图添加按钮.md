@@ -1,6 +1,6 @@
 ---
 title: Odoo Form视图添加按钮
-date: 2019-08-17 13:47:22
+date: 2019-08-15 13:47:22
 tags: odoo
 categories: odoo
 ---
