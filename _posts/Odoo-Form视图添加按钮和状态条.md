@@ -42,7 +42,7 @@ def re_action(self):
 
 ## 使用特殊字段state添加statusbar
 
-> `states=xx` 当`state`不为`states`的值时该模块被隐藏
+> `states=xx`: 当`state`不为`states`的值时该模块被隐藏
 
 ```python
 # 定义状态字段
