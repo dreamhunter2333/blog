@@ -1,11 +1,11 @@
 ---
-title: Odoo Form视图添加按钮
+title: Odoo Form视图添加按钮和状态条
 date: 2019-08-15 13:47:22
 tags: odoo
 categories: odoo
 ---
 
-# Odoo Form视图添加按钮
+# Odoo Form视图添加按钮和状态条
 
 ## xml文件添加`<header>` `<button>`
 
@@ -38,4 +38,20 @@ def re_action(self):
         view_mode='form',
         target='new',
     )
+```
+
+## 使用特殊字段state添加statusbar
+
+> `states=xx` 当`state`不为`states`的值时该模块被隐藏
+
+```python
+# 定义状态字段
+state = fields.Selection([('draft', '草稿'), ('rent', '借出'), ('return', '归还')], default='draft', string="状态")
+```
+```xml
+<!-- 添加状态条 -->
+<header>
+    <button name="rent_book" type="object" string="借书" class="oe_highlight" states="draft"/>
+    <field name="state" widget="statusbar" statusbar_visible="draft, rent, return"/>
+</header>
 ```
