@@ -1,5 +1,5 @@
 ---
-title: odoo search视图
+title: Odoo search视图
 date: 2019-08-18 17:07:02
 tags: odoo
 categories: odoo
