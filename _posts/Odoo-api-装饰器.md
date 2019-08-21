@@ -3,10 +3,10 @@ title: Odoo @api.* 装饰器
 date: 2019-08-19 18:37:22
 tags: 
     - odoo
-    - @api
+    - api
 categories: 
     - odoo
-    - @api
+    - api
 ---
 
 # Odoo @api.* 装饰器
