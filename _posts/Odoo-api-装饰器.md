@@ -1,8 +1,12 @@
 ---
 title: Odoo @api.* 装饰器
 date: 2019-08-19 18:37:22
-tags: odoo
-categories: odoo
+tags: 
+    - odoo
+    - @api
+categories: 
+    - odoo
+    - @api
 ---
 
 # Odoo @api.* 装饰器
@@ -38,9 +42,13 @@ categories: odoo
 ```python
 @api.onchange('demo')
 def onchange_demo(self):
-    pass
-    # 弱提醒
-    return {'warning': {'title': "title", 'message': "message"}}
+    # 循环多条记录
+    for rec in self:
+        # 判断字段是否存在
+        if rec.demo:
+            if rec.demo < 0:
+                # 弱提醒
+                return {'warning': {'title': "title", 'message': "message"}}
 ```
 
 > 当用户更改表单中的字段值（但尚未保存表单）时，根据该值自动更新其他字段可能很有用，
