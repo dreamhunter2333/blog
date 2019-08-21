@@ -25,6 +25,7 @@ categories: odoo
 
 ## @api.contrains
 > 在保存时对字段进行约束。
+> 抛出异常不能保存
 
 
 ## @api.depends('xxx')
@@ -32,7 +33,15 @@ categories: odoo
 > 使用compute参数计算字段时。它必须将计算值分配给字段。  
 > 如果它使用其他字段的值，则应使用`@api.depends()`指定这些字段
 
-## onchange：动态更新UI
+## @api.onchange：动态更新UI
+
+```python
+@api.onchange('demo')
+def onchange_demo(self):
+    pass
+    # 弱提醒
+    return {'warning': {'title': "title", 'message': "message"}}
+```
 
 > 当用户更改表单中的字段值（但尚未保存表单）时，根据该值自动更新其他字段可能很有用，
 
