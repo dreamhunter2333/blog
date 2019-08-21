@@ -70,6 +70,6 @@ state = fields.Selection([('draft', '草稿'), ('rent', '借出'), ('return', '�
 <!-- 添加状态条 -->
 <header>
     <button name="rent_book" type="object" string="借书" class="oe_highlight" states="draft"/>
-    <field name="state" widget="statusbar" statusbar_visible="draft, rent, return"/>
+    <field name="state" widget="statusbar" statusbar_visible="draft,rent,return"/>
 </header>
 ```
