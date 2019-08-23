@@ -1,5 +1,5 @@
 ---
-title: Odoo many2one隐藏创建选项 many2many不弹出编辑框
+title: Odoo many2one隐藏创建选项many2many不弹出编辑框
 date: 2019-08-22 14:22:20
 tags: 
     - odoo
