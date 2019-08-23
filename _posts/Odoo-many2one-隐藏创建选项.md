@@ -11,7 +11,7 @@ categories:
     - many2many
 ---
 
-# Odoo many2one 隐藏创建选项 many2many 不弹出编辑框
+# Odoo many2one隐藏创建选项many2many不弹出编辑框
 
 ## many2one 隐藏创建选项
 
