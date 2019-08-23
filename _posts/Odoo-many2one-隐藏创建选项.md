@@ -22,5 +22,5 @@ categories:
 ```
 ## many2many 点击添加项目不弹窗只增加一行
 
-> 在tree视图上加:`editable="bottom"  `
+> 在tree视图上加:`editable="bottom"`  
 > 如果没有添加项目按钮，可以使用`editable="top"`
