@@ -52,7 +52,7 @@ cd /mnt/f/odoo12
 git clone https://github.com/odoo/odoo.git
 # 使用清华源快速安装依赖
 sudo pip3 install -r odoo/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-$ pip3 install num2words phonenumbers psycopg2-binary watchdog xlwt -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 install num2words phonenumbers psycopg2-binary watchdog xlwt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ## 启动odoo12
