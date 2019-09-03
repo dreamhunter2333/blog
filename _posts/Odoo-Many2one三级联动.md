@@ -52,7 +52,7 @@ class Book(models.Model):
 ```xml
 <form>
     <sheet>
-        <group clo="6" colspan="2">
+        <group col="6" colspan="2">
             <field name="library_id"/>
             <field name="category_id" domain="[('info_id', '=', library_id)]"/>
             <field name="book_id" domain="[('category_id', '=', category_id)]"/>
