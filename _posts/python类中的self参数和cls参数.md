@@ -7,6 +7,9 @@ categories: odoo
 
 # python类中的self参数和cls参数
 
+> 类先调用__new__方法，返回该类的实例对象  
+> 这个实例对象就是__init__方法的第一个参数self，即self是__new__的返回值
+
 ```python
 class A(object):
     def func1(self):
@@ -17,7 +20,6 @@ class A(object):
     @classmethod
     def func3(cls):
         print("func3:", cls)
-
 
 a = A()
 
