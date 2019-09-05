@@ -114,6 +114,8 @@ odoo/odoo-bin -c odoo.conf
 ps -ef
 # 找到需要终止的任务的PID，比如2333
 kill 2333
+# 杀死所有python3
+killall python3
 ```
 
 > 然后就可以本机调试了
