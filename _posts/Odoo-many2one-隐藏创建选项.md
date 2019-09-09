@@ -5,10 +5,7 @@ tags:
     - odoo
     - many2one
     - many2many
-categories:
-    - odoo
-    - many2one
-    - many2many
+categories: odoo
 ---
 
 # Odoo many2one隐藏创建选项many2many不弹出编辑框

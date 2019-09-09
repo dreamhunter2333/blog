@@ -4,9 +4,7 @@ date: 2019-08-25 13:25:56
 tags: 
     - odoo
     - mail
-categories:
-    - odoo
-    - mail
+categories: odoo
 ---
 
 # Odoo mail 消息记录

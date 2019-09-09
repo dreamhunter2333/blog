@@ -4,9 +4,7 @@ date: 2019-08-19 18:37:22
 tags: 
     - odoo
     - api
-categories: 
-    - odoo
-    - api
+categories: odoo
 ---
 
 # Odoo @api.* 装饰器

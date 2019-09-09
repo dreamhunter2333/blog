@@ -5,10 +5,7 @@ tags:
     - odoo
     - one2many
     - many2many
-categories:
-    - odoo
-    - one2many
-    - many2many
+categories: odoo
 ---
 
 #  Odoo one2many many2many 写值规则
