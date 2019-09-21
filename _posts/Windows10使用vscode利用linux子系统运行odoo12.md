@@ -5,7 +5,7 @@ tags:
     - odoo
     - wsl
 categories:
-    - odoo 
+    - odoo
     - wsl
 ---
 
