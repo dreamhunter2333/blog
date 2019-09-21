@@ -2,7 +2,7 @@
 title: Windows10使用vscode利用linux子系统运行odoo12
 date: 2019-09-21 15:14:45
 tags: 
-    - odoo 
+    - odoo
     - wsl
 categories:
     - odoo 
