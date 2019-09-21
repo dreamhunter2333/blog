@@ -1,7 +1,7 @@
 ---
 title: mipad2 小米平板2 win10 屏蔽三个按键
 date: 2019-04-10 12:39:50
-tags: mipad2
+tags: linux
 categories: mipad2
 ---
 ### 为什么要屏蔽

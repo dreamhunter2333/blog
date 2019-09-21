@@ -2,7 +2,7 @@
 title: xampp建站
 date: 2019-03-31 00:39:46
 tags: xampp
-categories: xampp
+categories: linux
 ---
 ### 一、工具/原料
 
