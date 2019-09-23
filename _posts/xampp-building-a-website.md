@@ -9,6 +9,7 @@ categories: linux
 * xampp
 
 ### 二、PHP环境配置
+
 #### 1、可以在终端使用
 
 ``` bash
@@ -31,6 +32,7 @@ wget http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/5.6.14/xampp-linu
 ```
 
 #### 3、安装xampp，为私有云安装构建阿帕奇和php环境
+
 ![xampp](/imgs/xampp.png)
 
 #### 4、启动xampp，执行
