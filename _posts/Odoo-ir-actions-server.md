@@ -7,6 +7,8 @@ categories: odoo
 
 # Odoo ir.actions.server
 
+<div align=center><img src="/imgs/odoo/odoo_action_server.png"></div>
+
 ## xml 配置
 
 ```xml
