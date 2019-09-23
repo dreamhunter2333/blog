@@ -5,8 +5,8 @@ tags:
     - docker
     - odoo
 categories:
-    - docker
     - odoo
+    - docker
 ---
 
 # Odoo新建模块
