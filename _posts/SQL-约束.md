@@ -5,8 +5,8 @@ tags:
   - odoo
   - sql
 categories:
-  - odoo
-  - sql1
+  - [odoo]
+  - [sql]
 ---
 
 # SQL 约束

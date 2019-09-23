@@ -5,8 +5,8 @@ tags:
     - odoo
     - wsl
 categories:
-    - odoo
-    - wsl
+    - [odoo]
+    - [wsl]
 ---
 
 # Windows10使用vscode利用linux子系统运行odoo12

@@ -6,8 +6,8 @@ tags:
     - linux
     - wsl
 categories:
-    - odoo
-    - linux
+    - [odoo]
+    - [linux]
 ---
 
 # 在windows的linux子系统中运行Odoo12
