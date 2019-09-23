@@ -3,6 +3,6 @@ layout: "about"
 title: "About"
 date: 2019-03-30 23:26:46
 ---
-<div style="display:block;text-align:center">
+<div style="line-height:100px; text-align:center;">
 <a herf="https://github.com/jinmu333/"  target="_blank">Github</a>
 </div>
