@@ -1,10 +1,10 @@
 ---
 title: Odoo新建模块
 date: 2019-08-14 23:11:37
-tags: 
+tags:
     - docker
     - odoo
-categories: 
+categories:
     - docker
     - odoo
 ---
