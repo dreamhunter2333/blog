@@ -4,5 +4,5 @@ title: "About"
 date: 2019-03-30 23:26:46
 ---
 <div align="center">
-<h1><a herf="https://github.com/jinmu333/">Github</a></h1>
+<a herf="https://github.com/jinmu333/">Github</a>
 </div>
