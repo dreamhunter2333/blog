@@ -4,9 +4,7 @@ date: 2019-08-20 20:21:48
 tags:
   - odoo
   - sql
-categories:
-  - [odoo]
-  - [sql]
+categories: odoo
 ---
 
 # SQL 约束
