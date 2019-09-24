@@ -3,6 +3,7 @@ title: Odoo ir.actions.server
 date: 2019-09-23 15:00:20
 tags: odoo
 categories: odoo
+cover_img: https://jcstaff.club/imgs/odoo/odoo_action_server.png
 ---
 
 # Odoo ir.actions.server
