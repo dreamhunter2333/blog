@@ -53,10 +53,10 @@ class Many2many(_RelationalMulti):
 ```python
 class Library(models.Model):
     _name = 'library.library'
-# comodel_name: library_library
-# relation: library_library_library_partner_rel
-# column1: library_library_id
-# column2: library_partner_id
+    # comodel_name: library_library
+    # relation: library_library_library_partner_rel
+    # column1: library_library_id
+    # column2: library_partner_id
     authors = fields.Many2many('library.partner')
 ```
 
@@ -67,9 +67,9 @@ class Library(models.Model):
 ```python
 class Library(models.Model):
     _name = 'library.library'
-# comodel_name: library_library
-# relation: library_library_library_partner_rel
-# column1: library_library_id
-# column2: library_partner_id
+    # comodel_name: library_library
+    # relation: library_library_library_partner_rel
+    # column1: library_library_id
+    # column2: library_partner_id
     authors = fields.Many2many('library.partner', 'library_relation', 'relation_library_id', 'relation_partner_id')
 ```
