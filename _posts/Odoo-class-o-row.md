@@ -15,4 +15,4 @@ categories: odoo
 </div>
 ```
 
-![](/imgs/odoo-model/class_o_row.png)
+![1](/imgs/odoo-model/class_o_row.png)
