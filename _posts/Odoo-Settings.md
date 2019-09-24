@@ -13,6 +13,19 @@ categories: odoo
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
     test_setting = fields.Boolean(string="图书馆 Test")
+
+    @api.multi
+    def set_values(self):
+        super(ResConfigSettings, self).set_values()
+        IrDefault = self.env['ir.default'].sudo()
+        IrDefault.set('res.config.settings', 'test_setting', self.test_setting)
+
+    @api.model
+    def get_values(self):
+        res = super(ResConfigSettings, self).get_values()
+        IrDefault = self.env['ir.default'].sudo()
+        res.update(test_setting=IrDefault.get('res.config.settings', 'test_setting'))
+        return res
 ```
 
 ## xml 视图继承
