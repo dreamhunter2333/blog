@@ -11,12 +11,12 @@ categories: sql
 
 ```sql
 -- 查询某些列
-SELECT column_name,column_name 
+SELECT column_name,column_name
 FROM table_name;
 -- 查询所有列
 SELECT * FROM table_name;
 -- 只列出查询的结果不同（distinct）的记录。
-SELECT DISTINCT column_name,column_name 
+SELECT DISTINCT column_name,column_name
 FROM table_name;
 ```
 
