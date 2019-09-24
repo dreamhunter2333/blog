@@ -8,7 +8,6 @@ tags:
 categories:
     - [odoo]
     - [linux]
-    - [wsl]
 ---
 
 # 在windows的linux子系统中运行Odoo12
