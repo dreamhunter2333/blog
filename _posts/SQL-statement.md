@@ -1,7 +1,7 @@
 ---
 title: SQL 基本语句
 date: 2019-08-19 00:12:24
-tags: sql
+tags: SQL
 categories: odoo
 ---
 
