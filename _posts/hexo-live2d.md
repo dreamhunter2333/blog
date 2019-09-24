@@ -5,14 +5,17 @@ tags: hexo
 categories: hexo
 ---
 ****
+
 ### 安装 hexo live2d
 
 ``` bash
-npm install --save hexo-helper-live2d 
+npm install --save hexo-helper-live2d
 
-npm install live2d-widget-model-koharu 
+npm install live2d-widget-model-koharu
 ```
+
 ****
+
 ### _config.yml 配置
 
 ``` bash
@@ -35,6 +38,8 @@ live2d:
 ```
 
 ****
+
 ### 效果
+
 ![hexo_live](/imgs/hexo_live.gif)
 ****
