@@ -5,7 +5,7 @@ tags: odoo
 categories: odoo
 ---
 
-# Odoo Controllers Website
+## Odoo Controllers Website
 
 > Controllers/*.python
 > 访问 `odoo网址/test`
