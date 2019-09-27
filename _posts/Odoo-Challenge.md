@@ -335,7 +335,7 @@ if __name__ == "__main__":
 
 ### Odoo Challenge level 11
 
-![level 11](/blog/source/imgs/odoo-challenge/odoo-challenge-11.jpg)
+![level 11](/blog/source/imgs/odoo-challenge/odoo-challenge-11.png)
 
 ```html
 <script type="text/javascript">
