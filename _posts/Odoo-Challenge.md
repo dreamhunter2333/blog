@@ -312,6 +312,27 @@ f8c7c2
 cd54a26
 ```
 
+反向计算 `pwd`
+
+```python
+r_return =[('cb34', 0, 4, 1), ('3c9fdaf2', 4, 20, 2), ('59aa1cd54', 5, 30, 3), 
+           ('5c8167413', 5, 40, 4), ('cd2ecb', 6, 40, 6), ('0', 7, 8, 1), 
+           ('f8fea78173', 10, 40, 3), ('f8c7c2', 10, 40, 5), ('86915', 15, 40, 6),
+           ('cd54a26', 20, 40, 3)]
+
+def compute_pwd(r_return):
+    pwd = ["" for i in range(100)]
+    for r_id in r_return:
+        j = 0
+        for i in range(r_id[1], r_id[2], r_id[3]):
+            pwd[i] = r_id[0][j]
+            j += 1
+    return ''.join(pwd)
+
+if __name__ == "__main__":
+    print(compute_pwd(r_return)) #
+```
+
 ### Odoo Challenge level 11
 
 ```html
