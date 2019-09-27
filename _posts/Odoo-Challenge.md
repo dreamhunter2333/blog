@@ -343,3 +343,15 @@ cd54a26
   });
 </script>
 ```
+
+```js
+// ts = "49146214389324782402070";
+// stmnt = "\"!Odoo - All your applications in one single solution\"";
+// multi = 4730524740;
+// ts.slice(eval(""+''+""+ƒ(1<0)+""+"-"+''+""+ƒ(0<1)+"-"+ƒ(1>0))) 为 70
+// stmnt.split("All").length 为 2
+if (parseInt(pwd.slice( )[0]) * parseInt(pwd.slice(0 - - - 1 - - - - - 1 - - - - 0)[1]) * 2 == 70 )
+// multi.toString().substr(1,4)+stmnt.substring(2,6) 为 7305Odoo
+0===pwd.lastIndexOf(multi.toString().substr(1,4)+stmnt.substring(2,6),0)
+// pwd = "7305Odoo57";
+```
