@@ -25,9 +25,10 @@ docker exec -it <CONTAINER ID> /bin/bash
 # 进入容器后终端执行
 pyhton3 odoo/odoo-bin scaffold <module name> <where to put it>
 ```
+
 > 生成的模块如图所示  
 
-![](/imgs/odoo-model/newmodel.png)
+![1](/imgs/odoo-model/newmodel.png)
 
 > `__manifest__.py` Odoo模块声明文件  
 > `__init__.py`     python模块声明导入  
@@ -38,8 +39,7 @@ pyhton3 odoo/odoo-bin scaffold <module name> <where to put it>
 
 ## __manifest__.py各字段定义
 
-![](/imgs/odoo-model/manifest.png)
-
+![2](/imgs/odoo-model/manifest.png)
 
 > `name`: 模块名称  
 > `depends`: 依赖的模块  
@@ -48,7 +48,7 @@ pyhton3 odoo/odoo-bin scaffold <module name> <where to put it>
 > `application`: True 是否为应用  
 > `auto_install`: False 是否在依赖都已安装时自动安装
 
-**data中的文件要注意排列顺序**
+**data中的文件要注意排列顺序
 
 ## models中python文件的对象(模型,类,表)、字段
 
@@ -75,11 +75,12 @@ class Library(models.Model):
 ```
 
 > `_name`: 引用时使用的对象名称  
-> `fields.Xxxx`: 各种字段   
+> `fields.Xxxx`: 各种字段
 
 ## views各种视图定义
 
 > `menuitem`: 菜单定义
+
 ```xml
 <menuitem name="图书馆"
             web_icon="library,static/description/icon.png"
@@ -92,7 +93,9 @@ class Library(models.Model):
             parent="library_menu_root"
             sequence="10"/>
 ```
+
 > `action`: 动作定义
+
 ```xml
 <record model="ir.actions.act_window"  id="library_rent_action">
     <field name="name">借阅记录</field>
@@ -103,7 +106,9 @@ class Library(models.Model):
     <field name="view_mode">tree,kanban,form</field>
 </record>
 ```
+
 > `tree`和`form`视图
+
 ```xml
 <!-- tree视图 -->
 <record model="ir.ui.view" id="library_partner_list">
@@ -134,6 +139,7 @@ class Library(models.Model):
 ## data中的xml写入预置数据
 
 > 方便模块测试在安装时预置数据
+
 ```xml
 <!-- 向模型library.partner中写入一条记录 -->
 <record id="object0" model="library.partner">
