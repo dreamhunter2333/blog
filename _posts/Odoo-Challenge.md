@@ -330,7 +330,7 @@ def compute_pwd(r_return):
     return ''.join(pwd)
 
 if __name__ == "__main__":
-    print(compute_pwd(r_return)) #
+    print(compute_pwd(r_return))
 ```
 
 ### Odoo Challenge level 11
@@ -364,6 +364,8 @@ if __name__ == "__main__":
   });
 </script>
 ```
+
+根据条件推出 `pwd`
 
 ```js
 // ts = "49146214389324782402070";
