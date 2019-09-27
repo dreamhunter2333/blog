@@ -268,3 +268,78 @@ print(pwd) # Password:'098796418df78085278e87829608c6081788fe7f'
 
 > 扫描二维码即是 `password`  
 > `74c6ccf1d7672fba44a84b524af4ac44f2d21707`
+
+### Odoo Challenge level 10
+
+![level 10](/imgs/odoo-challenge/odoo-challenge-10.png)
+
+```js
+// JS
+r = function(pwd, fr, to, by) {
+    return _.map(
+      _.range(fr, to, by), function(i) { return pwd[i] }
+    ).join('');
+}
+print = console.log
+```
+
+```py
+// PYTHON
+>>> def r(pwd, fr, to, by):
+...     return ''.join([pwd[i] for i in range(fr, to, by)])
+
+# Output:
+
+>>> print(r(pwd, 0, 4, 1))
+cb34
+>>> print(r(pwd, 4, 20, 2))
+3c9fdaf2
+>>> print(r(pwd, 5, 30, 3))
+59aa1cd54
+>>> print(r(pwd, 5, 40, 4))
+5c8167413
+>>> print(r(pwd, 6, 40, 6))
+cd2ecb
+>>> print(r(pwd, 7, 8, 1))
+0
+>>> print(r(pwd, 10, 40, 3))
+f8fea78173
+>>> print(r(pwd, 10, 40, 5))
+f8c7c2
+>>> print(r(pwd, 15, 40, 6))
+86915
+>>> print(r(pwd, 20, 40, 3))
+cd54a26
+```
+
+### Odoo Challenge level 11
+
+```html
+<script type="text/javascript">
+  $( document ).ready(function() {
+    $("#submit").on('click', function(e) {
+      e.preventDefault();
+      if (window.location.search.indexOf('challenge')!=-1) {debugger;}
+      pwd = $("#pwd").val();
+      ts = $("#pwd").data('ts')+'';
+      stmnt = getBiskuit('X-Odoo');
+      multi = true;
+      $(ts.substr(0,5).split('')).each(function( i , j) {
+        multi *= stmnt[parseInt(j) +1].charCodeAt(0);
+      });
+      if (parseInt(pwd.slice(-(--([,,,undefined].join()).length))[0]) * parseInt(pwd.slice(0 - - - 1 - - - - - 1 - - - - 0)[1]) * stmnt.split("All").length == ts.slice(eval(""+''+""+ƒ(1<0)+""+"-"+''+""+ƒ(0<1)+"-"+ƒ(1>0)))) {
+        $.ajax("./70/"+ pwd, {
+          success: function (o) {
+            0===pwd.lastIndexOf(multi.toString().substr(1,4)+stmnt.substring(2,6),0)&&(
+              $.post('submit', {pwd: o, csrf_token:'04b54d67fe37e5666687d12a34bf0e9cddf3cceco1569572517'}).always(function(){window.location.href='/jobs/challenge/next'})
+            );
+            },
+            error: function (o) {
+              console.error('To be or not to be... ');
+          }
+        });
+      }
+    });
+  });
+</script>
+```
