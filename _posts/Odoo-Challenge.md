@@ -335,7 +335,7 @@ if __name__ == "__main__":
 
 ### Odoo Challenge level 11
 
-![level 11](/blog/source/imgs/odoo-challenge/odoo-challenge-11.png)
+![level 11](/imgs/odoo-challenge/odoo-challenge-11.png)
 
 ```html
 <script type="text/javascript">
@@ -382,3 +382,7 @@ if (parseInt(pwd.slice(-(--([,,,undefined].join()).length))[0]) * parseInt(pwd.s
 0===pwd.lastIndexOf(multi.toString().substr(1,4)+stmnt.substring(2,6),0)
 // pwd = "7305Odoo57";
 ```
+
+### Odoo Challenge level end
+
+![level end](/imgs/odoo-challenge/odoo-challenge-end.png)
