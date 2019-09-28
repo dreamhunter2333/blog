@@ -21,6 +21,7 @@ categories:
 安装 `Visual Studio Code` 插件 `Remote - WSL`
 配置启动文件
 **`.vscode/launch.json`**
+
 ```json
 {
     "version": "0.2.0",
