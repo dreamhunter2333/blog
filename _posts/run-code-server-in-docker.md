@@ -44,9 +44,15 @@ RUN npm set registry https://registry.npm.taobao.org/ && \
 RUN useradd --create-home --no-log-init --shell /bin/bash admin && \
     adduser admin sudo && \
     echo 'admin:admin' | chpasswd
+
+# 下载 code-server
+RUN cd /opt/ && \
+    wget -c https://github.com/cdr/code-server/releases/download/2.1523-vsc1.38.1/code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz && \
+    tar zxvf code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz && \
+    mv code-server2.1523-vsc1.38.1-linux-x86_64 code-server
+
 # 创建目录 权限 777
-RUN mkdir /opt/code-server && \
-    mkdir /opt/hexo && \
+RUN mkdir /opt/hexo && \
     chmod -R 777 /opt && \
     chmod -R 777 /home/admin
 
@@ -54,9 +60,6 @@ USER admin
 # 下载 vscode python插件
 RUN cd /opt/code-server && \ 
     wget -c https://github.com/Microsoft/vscode-python/releases/download/2019.9.34911/ms-python-release.vsix
-# 下载 code-server
-RUN wget -c https://github.com/cdr/code-server/releases/download/2.1523-vsc1.38.1/code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz && \
-    tar zxvf code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz -C ./
 
 WORKDIR /opt/code-server
 ```
