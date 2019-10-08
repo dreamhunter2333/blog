@@ -15,10 +15,8 @@ categories: odoo
 
 ## @api.multi
 
->  multi则指self是多个记录的合集。因此，常使用for—in语句遍历self。
-
+> multi则指self是多个记录的合集。因此，常使用for—in语句遍历self。
 > multi通常用于：在tree视图中点选多条记录，然后执行某方法，那么那个方法必须用@api.multi修饰，而参数中的self则代表选中的多条记录。
-
 > 如果仅仅是在form视图下操作，那么self中通常只有当前正在操作的记录。
 
 ## @api.model
@@ -26,9 +24,9 @@ categories: odoo
 > 此时的self仅代表模型本身，不含任何记录信息。
 
 ## @api.contrains
+
 > 在保存时对字段进行约束。
 > 抛出异常不能保存
-
 
 ## @api.depends('xxx')
 
@@ -50,7 +48,6 @@ def onchange_demo(self):
 ```
 
 > 当用户更改表单中的字段值（但尚未保存表单）时，根据该值自动更新其他字段可能很有用，
-
 > 计算字段会自动检查并重新计算，它们不需要 onchange
 对于非计算字段，onchange()装饰器用于提供新的字段值：
 
