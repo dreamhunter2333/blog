@@ -9,6 +9,8 @@ categories: odoo
 
 ### zh_CN.po
 
+![zh_CN.po](/imgs/odoo/Odoo-Translation.jpg)
+
 ```po
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
@@ -41,8 +43,7 @@ msgstr "书名2333"
 msgid "Invalid expression"
 msgstr "错误"
 
-#. module: mail
-#. openerp-web
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_library__rent_ids
 #: model_terms:ir.ui.view,arch_db:library.library_book_form
 msgid "借书记录"
