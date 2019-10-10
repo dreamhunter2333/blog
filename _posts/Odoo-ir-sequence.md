@@ -16,7 +16,9 @@ categories: odoo
     <field name="prefix">LIB</field>
     <field eval="1" name="number_next"/>
     <field eval="1" name="number_increment"/>
+    <field eval="True" name="use_date_range"/>
     <field eval="False" name="company_id"/>
+    <field name="padding">5</field>
 </record>
 ```
 
