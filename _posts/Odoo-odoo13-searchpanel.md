@@ -19,3 +19,5 @@ categories: odoo
     </field>
 </record>
 ```
+
+![searchpanel](/imgs/odoo/odoo-searchpanel.jpg)
