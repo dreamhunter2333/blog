@@ -1,5 +1,5 @@
 ---
-title: odoo13 <searchpanel>
+title: odoo13 searchpanel
 date: 2019-10-11 15:16:03
 tags: odoo
 categories: odoo
