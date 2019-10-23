@@ -11,7 +11,7 @@ tags: linux
 
 下载对应版本的 `zsh-common` `zsh`
 [zsh](http://archive.ubuntu.com/ubuntu/pool/main/z/zsh/)
-将 `zsh-common_5.1.1-1ubuntu2.3_all.deb  zsh_5.1.1-1ubuntu2.3_amd64.deb` 拷贝
+将 `zsh-common_5.1.1-1ubuntu2.3_all.deb` `zsh_5.1.1-1ubuntu2.3_amd64.deb` 拷贝
 
 ```bash
 # 下载并拷贝到 ~/.oh-my-zsh
