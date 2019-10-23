@@ -33,5 +33,7 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ### vscode 默认终端
 
 ```json
+{
 "terminal.integrated.shell.linux": "/bin/zsh",
+}
 ```
