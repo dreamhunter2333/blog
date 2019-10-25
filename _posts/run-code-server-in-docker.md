@@ -19,7 +19,7 @@ LABEL author=jinmu333
 # 使用阿里源
 RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
-# 安装依赖
+
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y locales
 RUN locale-gen zh_CN
@@ -31,37 +31,36 @@ ENV LANG zh_CN.UTF-8
 ENV LANGUAGE zh_CN.UTF-8
 ENV LC_ALL zh_CN.UTF-8
 
-RUN apt-get install sudo vim curl zsh wget -y
+RUN apt-get install sudo vim curl zsh wget nano psmisc -y
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install python3 python3-pip screenfetch git -y
+RUN apt-get install python3 python3-pip python3-pypdf2 screenfetch git -y
 RUN apt-get update -y && apt-get upgrade -y
+ENV SHELL=/bin/zsh
+RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+RUN apt-get install build-essential libxslt-dev libzip-dev libldap2-dev libsasl2-dev libssl-dev -y
+RUN apt-get update -y && apt-get upgrade -y
+COPY ./requirements.txt /opt/
+RUN python3 -m pip install -r /opt/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple && \
+    rm -rf /opt/requirements.txt
+RUN python3 -m pip install autopep8 num2words phonenumbers psycopg2-binary watchdog xlwt pylint -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN apt-get update -y && apt-get upgrade -y
+
 RUN apt-get install nodejs npm -y
 RUN apt-get update -y && apt-get upgrade -y
 
 RUN npm set registry https://registry.npm.taobao.org/ && \
-    npm install -g hexo-cli
-# 新建用户 admin
-RUN useradd --create-home --no-log-init --shell /bin/bash admin && \
-    adduser admin sudo && \
-    echo 'admin:admin' | chpasswd
+    # npm install -g hexo-cli && \
+    # npm install -g rtlcss && \
+    npm install -g jshint
 
-# 下载 code-server
-RUN cd /opt/ && \
-    wget -c https://github.com/cdr/code-server/releases/download/2.1523-vsc1.38.1/code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz && \
-    tar zxvf code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz && \
-    mv code-server2.1523-vsc1.38.1-linux-x86_64 code-server
+# RUN curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
+#     && echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
+#     && apt-get install -y --no-install-recommends ./wkhtmltox.deb \
+#     && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
-# 创建目录 权限 777
-RUN mkdir /opt/hexo && \
-    chmod -R 777 /opt && \
-    chmod -R 777 /home/admin
+USER root
 
-USER admin
-# 下载 vscode python插件
-RUN cd /opt/code-server && \ 
-    wget -c https://github.com/Microsoft/vscode-python/releases/download/2019.9.34911/ms-python-release.vsix
-
-WORKDIR /opt/code-server
+WORKDIR /opt/odoo
 ```
 
 ```bash
