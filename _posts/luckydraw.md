@@ -25,8 +25,8 @@ tags:
     </div>
 
 </body>
-<script src="./src/ES6/Global.js"></script>
-<script src="./src/ES6/Sudoku.js"></script>
+<script src="./glo.js"></script>
+<script src="./sudoku.js"></script>
 <script>
     var canvas = document.getElementById('canvas'),
         context = canvas.getContext('2d');
