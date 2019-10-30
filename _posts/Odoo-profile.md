@@ -12,7 +12,6 @@ tags: odoo
 Another profiler can be used to log statistics on a method:
 
 ```python
-
     from odoo.tools.profiler import profile
     [...]
     @profile
@@ -56,6 +55,7 @@ completely reviewed.
 # 引入 profile
 from odoo.tools.profiler import profile
 ...
+    # 添加装饰器
     @api.model_create_multi
     @profile
     def create(self, vals_list):
