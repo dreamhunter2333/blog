@@ -7,4 +7,4 @@ tags:
 
 ## luckydraw
 
-[luckydraw](/2018/luckydraw/GB-canvas-turntable.html)
+[luckydraw](/imgs/luckydraw/GB-canvas-turntable.html)
