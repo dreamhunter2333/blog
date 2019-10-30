@@ -7,24 +7,13 @@ tags:
 
 ## luckydraw
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>九宫格</title>
-</head>
-<body>
-    <a href="https://github.com/lhy58/canvas-lottery" class="fork">
-        <img style="position: absolute; top: 0; left: 0; border: 0;" src="./src/images/fork-me.png" alt="">
-    </a>
-     <!--320px是手机最小宽度,注意这个的width,height应该: 320 * ratio + px-->
-    <div style="text-align: center;margin: 100px 0 0 0">
-        <canvas id="canvas" width="320px" height="320px" style="width: 320px;height: 320px;"></canvas>
-    </div>
-
-</body>
+<a href="https://github.com/lhy58/canvas-lottery" class="fork">
+    <img style="position: absolute; top: 0; left: 0; border: 0;" src="./src/images/fork-me.png" alt="">
+</a>
+    <!--320px是手机最小宽度,注意这个的width,height应该: 320 * ratio + px-->
+<div style="text-align: center;margin: 100px 0 0 0">
+    <canvas id="canvas" width="320px" height="320px" style="width: 320px;height: 320px;"></canvas>
+</div>
 <script src="./glo.js"></script>
 <script src="./sudoku.js"></script>
 <script>
@@ -44,7 +33,6 @@ tags:
             {type: 'image', content: 'https://img11.360buyimg.com/n7/jfs/t3187/325/423764794/213696/f4eb1dbd/57b68142Nbe104228.jpg'},
             {type: 'text', content: '火星一日游'}
         ],
-
         finish: function (index) {
             switch(this.awards[index].type) {
                 case 'text':
@@ -61,4 +49,3 @@ tags:
         }
     }).render(canvas, context, ratio);
 </script>
-</html>
