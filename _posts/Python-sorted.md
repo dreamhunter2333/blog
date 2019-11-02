@@ -27,7 +27,7 @@ sorted(iterable, key=None, reverse=False)
 [1, 2, 3, 4, 5]
 ```
 
-### odoo 中重新排序的列表
+### odoo 中重新排序列表
 
 ```python
 demo = self.sorted(key=lambda r: r.sequence)
