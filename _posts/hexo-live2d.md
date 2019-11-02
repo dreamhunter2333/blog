@@ -2,7 +2,7 @@
 title: hexo live2d
 date: 2019-04-09 22:04:57
 tags: hexo
-categories: hexo
+categories: linux
 ---
 ****
 
