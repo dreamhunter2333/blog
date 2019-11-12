@@ -1,6 +1,7 @@
 ---
 title: code-server在线编辑器 in docker
 date: 2019-09-28 13:55:36
+cover_img: /imgs/code-server/code_server.jpg
 categories: docker
 tags: 
     - docker
