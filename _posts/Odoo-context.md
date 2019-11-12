@@ -2,7 +2,7 @@
 title: Odoo context
 date: 2019-11-12 23:02:39
 categories: odoo
-tags: 
+tags:
     - [odoo]
     - [context]
 ---

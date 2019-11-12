@@ -33,30 +33,11 @@ ENV LC_ALL zh_CN.UTF-8
 
 RUN apt-get install sudo vim curl zsh wget nano psmisc -y
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install python3 python3-pip python3-pypdf2 screenfetch git -y
+RUN apt-get install python3 python3-pip screenfetch git -y
 RUN apt-get update -y && apt-get upgrade -y
 ENV SHELL=/bin/zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
-RUN apt-get install build-essential libxslt-dev libzip-dev libldap2-dev libsasl2-dev libssl-dev -y
 RUN apt-get update -y && apt-get upgrade -y
-COPY ./requirements.txt /opt/
-RUN python3 -m pip install -r /opt/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple && \
-    rm -rf /opt/requirements.txt
-RUN python3 -m pip install autopep8 num2words phonenumbers psycopg2-binary watchdog xlwt pylint -i https://pypi.tuna.tsinghua.edu.cn/simple
-RUN apt-get update -y && apt-get upgrade -y
-
-RUN apt-get install nodejs npm -y
-RUN apt-get update -y && apt-get upgrade -y
-
-RUN npm set registry https://registry.npm.taobao.org/ && \
-    # npm install -g hexo-cli && \
-    # npm install -g rtlcss && \
-    npm install -g jshint
-
-# RUN curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
-#     && echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
-#     && apt-get install -y --no-install-recommends ./wkhtmltox.deb \
-#     && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
 USER root
 
