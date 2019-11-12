@@ -27,5 +27,6 @@ return {
 ### 获取context
 
 ```python
-demo_id = fields.Many2one('cashier.bank', default=lambda self: self.env.context.get('demo_id'))
+# demo 在 context 中时 作为 demo_id 的默认值
+demo_id = fields.Many2one('cashier.bank', default=lambda self: self.env.context.get('demo'))
 ```
