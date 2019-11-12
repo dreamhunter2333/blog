@@ -12,7 +12,7 @@ tags:
 
 ### 从 ubuntu18 构建镜像
 
-<p class="success"> 编写`Dockerfile` </p>
+<p class="success"> 编写Dockerfile</p>
 
 ```Dockerfile
 FROM ubuntu:latest
