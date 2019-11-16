@@ -7,7 +7,7 @@ tags: odoo
 
 ## Odoo domain inverse 'in'
 
-[('demo_ids', 'in', demo_id.id)]
+`[('demo_ids', 'in', demo_id.id)]`
 
 `domain` 操作符中的 `in` 可以反向表示，
 
