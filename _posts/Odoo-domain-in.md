@@ -1,11 +1,13 @@
 ---
-title: Odoo domain [('demo_ids', 'in', demo_id.id)]
+title: Odoo domain inverse 'in'
 date: 2019-11-16 10:02:42
 categories: odoo
 tags: odoo
 ---
 
-## Odoo domain [('demo_ids', 'in', demo_id.id)]
+## Odoo domain inverse 'in'
+
+[('demo_ids', 'in', demo_id.id)]
 
 `domain` 操作符中的 `in` 可以反向表示，
 
