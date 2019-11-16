@@ -15,29 +15,23 @@ categories: docker
 brew cask install docker
 
 # 构建开发镜像
-docker build -f ./Dockerfile -t debian:sketch .
+docker build -f Dockerfile -t demo:1.0 .
 ```
 
 ### Windows要创建localvolume
 
 ```bash
 # Windows 需要创建 local volume
-docker volume create --name pscloud-postgresql-volume -d local
+docker volume create --name demo-volume -d local
 ```
 
 ### 启动 停止
 
 ```bash
 # 启动
-# windows:
-docker-compose -f docker-compose-win.yaml up
-# linux/mac:
 docker-compose -f docker-compose.yaml up
 
 # 停止
-# windows:
-docker-compose -f docker-compose-win.yaml down
-# linux/mac:
 docker-compose -f docker-compose.yaml down
 ```
 
@@ -66,4 +60,7 @@ docker exec -it "ONTAINER ID" /bin/bash
 
 # 停止的容器
 docker ps -a
+
+# volume
+docker volume ls
 ```
