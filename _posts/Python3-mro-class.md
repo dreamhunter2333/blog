@@ -11,7 +11,7 @@ tags: python
 其中 `self.__class__.mro()` 从第一个类方法被调用时就确定了
 而 `__class__.mro()` 则当前类方法被调用时才确定
 
-所以指定调用某个类方法的时候可以使用 `__class__.mro()[2].m(self)` 的形式
+所以指定调用 `MRO` 列表中某个类方法的时候可以使用 `__class__.mro()[2].m(self)` 的形式
 
 ```python
 class A:
