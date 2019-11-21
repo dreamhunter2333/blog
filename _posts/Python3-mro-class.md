@@ -14,7 +14,7 @@ tags: python
 所以指定调用某个类方法的时候可以使用 `__class__.mro()[2].m(self)` 的形式
 
 ```python
-    class A:
+class A:
     def m(self):
         print('------A------')
         print(__class__.mro())
@@ -22,7 +22,7 @@ tags: python
         print('------A------')
 
 
-    class B(A):
+class B(A):
     def m(self):
         print('------B------')
         super(B, self).m()
