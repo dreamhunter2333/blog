@@ -1,0 +1,21 @@
+---
+title: odoo func env.context
+date: 2019-12-01 22:05:26
+categories: odoo
+tags: odoo
+---
+
+## odoo func env.context
+
+### 获取 context 内容
+
+```python
+self.env.context.get('demo'):
+```
+
+### 增加 context 内容
+
+```python
+context = dict(self.env.context, demo=True)
+self.env = self.env(context=context)
+```
