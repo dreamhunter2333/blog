@@ -19,3 +19,9 @@ self.env.context.get('demo'):
 context = dict(self.env.context, demo=True)
 self.env = self.env(context=context)
 ```
+
+## with_context 内容 运行函数
+
+```python
+self.with_context(demo=True).demo_func()
+```
