@@ -1,11 +1,36 @@
 ---
 title: Count code Lines by git log
-date: 2019-11-03 00:34:42
+date: 2019-12-15 00:34:42
 categories: git 
 tags: git 
 ---
 
 ## git log 代码统计
+
+### git统计代码量脚本
+
+* 保存为`.sh`脚本查看指定人的代码行数以及行数和
+
+```bash
+#!/bin/bash
+echo -e "\n-------------------git log start-------------------\n"
+# 查看的用户名列表
+names=(username1 username1)
+added=0
+removed=0
+totaled=0
+for name in ${names[*]};
+do
+echo -en "$name"; 
+    eval $(git log --author="$name" --pretty=tformat: --since==2019-12-8 --until=2019-12-14 --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf("add=%s, remove=%s, total=%s", add, subs, loc)}' -);
+    echo ": added lines: $add removed lines: $remove total lines: $total"
+    let added+=${add::-1}
+    let removed+=${remove::-1}
+    let totaled+=${total::-1}
+done
+echo -e "\nAll:  added lines: $added, removed lines: $removed, total lines: $totaled"
+echo -e "\n------------------------end------------------------"
+```
 
 ### 查看git上的某个人代码量
 
