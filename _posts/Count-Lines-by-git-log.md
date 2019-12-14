@@ -14,8 +14,7 @@ tags: git
 ```bash
 #!/bin/bash
 echo -e "\n-------------------git log start-------------------\n"
-# 查看的用户名列表
-names=(username1 username1)
+names=(liuhanfu liujunhao mazhengyao 郑兆涵)
 added=0
 removed=0
 totaled=0
@@ -26,7 +25,7 @@ echo -en "$name";
     echo ": added lines: $add removed lines: $remove total lines: $total"
     let added+=${add::-1}
     let removed+=${remove::-1}
-    let totaled+=${total::-1}
+    let totaled+=$total
 done
 echo -e "\nAll:  added lines: $added, removed lines: $removed, total lines: $totaled"
 echo -e "\n------------------------end------------------------"
