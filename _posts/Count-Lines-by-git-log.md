@@ -14,13 +14,13 @@ tags: git
 ```bash
 #!/bin/bash
 echo -e "\n-------------------git log start-------------------\n"
-names=(liuhanfu liujunhao mazhengyao 郑兆涵)
+names=(demo demo2)
 added=0
 removed=0
 totaled=0
 for name in ${names[*]};
 do
-echo -en "$name"; 
+echo -en "$name";
     eval $(git log --author="$name" --pretty=tformat: --since==2019-12-8 --until=2019-12-14 --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf("add=%s, remove=%s, total=%s", add, subs, loc)}' -);
     echo ": added lines: $add removed lines: $remove total lines: $total"
     let added+=${add::-1}
