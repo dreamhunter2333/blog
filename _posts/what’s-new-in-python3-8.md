@@ -47,7 +47,8 @@ while (block := f.read(256)) != '':
 
 ## 仅限位置形参 `/`
 
-在下面的例子中，形参 a 和 b 为仅限位置形参，c 或 d 可以是位置形参或关键字形参，而 e 或 f 要求为关键字形参:
+在下面的例子中，形参 a 和 b 为仅限位置形参，  
+c 或 d 可以是位置形参或关键字形参，而 e 或 f 要求为关键字形参:
 
 ```python
 def f(a, b, /, c, d, *, e, f):
@@ -59,7 +60,8 @@ f(10, b=20, c=30, d=40, e=50, f=60)   # b cannot be a keyword argument
 f(10, 20, 30, 40, 50, f=60)           # e must be a keyword argument
 ```
 
-这种标记形式的一个用例是它允许纯 Python 函数完整模拟现有的用 C 代码编写的函数的行为。 例如，内置的 pow() 函数不接受关键字参数:
+这种标记形式的一个用例是它允许纯 Python 函数完整模拟现有的  
+用 C 代码编写的函数的行为。 例如，内置的 pow() 函数不接受关键字参数:
 
 ```python
 def pow(x, y, z=None, /):
@@ -71,7 +73,9 @@ def pow(x, y, z=None, /):
 len(obj='hello')  # The "obj" keyword argument impairs readability
 ```
 
-另一个益处是将形参标记为仅限位置形参将允许在未来修改形参名而不会破坏客户的代码。 例如，在 statistics 模块中，形参名 dist 在未来可能被修改。 这使得以下函数描述成为可能:
+另一个益处是将形参标记为仅限位置形参将允许在未来修改形参名而不会破坏客户的代码。  
+例如，在 statistics 模块中，形参名 dist 在未来可能被修改。  
+这使得以下函数描述成为可能:
 
 ```python
 def quantiles(dist, /, *, n=4, method='exclusive')
