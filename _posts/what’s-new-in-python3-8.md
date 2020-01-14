@@ -1,8 +1,8 @@
 ---
 title: What’s New In Python 3.8
 date: 2020-01-14 23:40:59
-categories:
-tags:
+categories: python
+tags: python
 ---
 
 ## What’s New In Python 3.8
