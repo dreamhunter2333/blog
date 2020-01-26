@@ -30,7 +30,6 @@ WHERE column_name operator value;
 ```
 
 > WHERE后的条件可以使用 AND OR 运算符
-
 > where后的语句运算符
 
 运算符  | 功能
