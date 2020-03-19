@@ -1,5 +1,5 @@
 ---
-title: timeit --- 测量小代码片段的执行时间
+title: timeit 测量小代码片段的执行时间
 date: 2020-03-19 17:09:25
 categories: python
 tags: python
