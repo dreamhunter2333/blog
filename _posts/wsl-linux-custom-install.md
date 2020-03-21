@@ -157,6 +157,11 @@ sudo echo xfce4-session >~/.xsession
 sudo service xrdp restart
 ```
 
+```bash
+# xrdp 打不开程序 执行
+sudo apt install libexo-1-0
+```
+
 `mstsc` 连接即可
 
 [sweet主题](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.gnome-look.org%2Fp%2F1253385%2F)
