@@ -170,5 +170,11 @@ sudo apt install libexo-1-0
 cp sweet* /usr/share/themes
 x Sweet-Dark
 sudo add-apt-repository ppa:numix/ppa
+# 若提示 apt-add-repository：找不到命令
+# sudo apt-get install software-properties-common
+# debconf: unable to initialize frontend: Dialog
+# debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+# debconf: falling back to frontend: Readline
+# sudo apt-get install dialog
 sudo apt-get install numix-icon-theme-circle
 ```
