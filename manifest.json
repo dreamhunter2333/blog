@@ -1,0 +1,15 @@
+{ 
+    "name" : "Dreamhunter Blog" , 
+    "short_name" : "Dreamhunter Blog" , 
+    "display" : "standalone" , 
+    "start_url" : "/" , 
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff", 
+    "icons" : [ 
+      {
+        "src": "/imgs/app.png",
+        "sizes": "615x615",
+        "type": "image/png"
+      }
+     ]
+}
